@@ -124,6 +124,7 @@ Jobridge
 ├── postings.csv
 ├── README.md
 └── requirements.txt
+```
 
 ### Architecture
 
@@ -133,10 +134,9 @@ User (Browser)
       ├── (HTTP Request: GET / POST)
       ▼
 ┌─────────────────────────────────────────────────────────────┐
-│ Replit Hosting Environment                                  │
-│                                                             │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │ Flask App (flask_app.py)                              │  │
+│ Replit Hosting Environment                           │  │ Flask App (src/flask_app.py)                          │  │
+│  │   ├── Routing & Controller                            │  │
+│  │   └─│  │ Flask App (flask_app.py)                              │  │
 │  │   ├── Routing & Controller                            │  │
 │  │   └── Template Rendering (templates/jobbridge.html)   │  │
 │  └──────────────┬────────────────────────────────────────┘  │
@@ -144,6 +144,8 @@ User (Browser)
 │                 ▼                                           │
 │  ┌───────────────────────────────────────────────────────┐  │
 │  │ Core Logic & Pipeline (core.py / Jobbridge_pipeline)  │  │
+  │  │
+)  │  │
 │  │   ├── Data Processing & CV Parsing                    │  │
 │  │   ├── Explainable Matching & Scoring                  │  │
 │  │   └── SDG & Reskilling Pathway Logic                  │  │
@@ -162,8 +164,15 @@ User (Browser)
       └──► Response (HTML UI + JavaScript Interactivity) returned to User
 ```
 
-## How We Use Replit *(Required)*
+## How to Run (On Replit)
 
+The web app is deployed with Replit Deployments and is live at https://jobridge.replit.app/.
+
+1. Open the Replit project at https://replit.com/@gwentiffany37/Jobridge, or **Create Repl → Import from GitHub** and paste `https://github.com/louisbenedictt/Jobridge`
+2. Click **Run**. Replit installs `requirements.txt` and starts the server with `python src/flask_app.py`
+3. The app opens in the **Webview** tab
+
+## How We Use Replit
 - **Development:** Replit help us to brainstorm and build our ideas.
 - **Hosting:** The app is deployed with Replit Deployments.
 

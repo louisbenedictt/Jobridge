@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent   # project root; the code lives in src/
 REF = ROOT / "data" / "reference"
 CVS = ROOT / "data" / "cvs"
 PROC = ROOT / "data" / "processed"
