@@ -9,8 +9,8 @@
 | **Team Name**          | JONG JAVA                                   |
 | **Team Domain**        | Domain 1                                    |
 | **SDG Track (1–17)**   | SDG 4 — Quality Education                  
-                           SDG 8 - Decent Work and Economic Growth    
-                           SDG 13 - Climate Action                     |
+                           SDG 5 - Gender Equality    
+                           SDG 8 - Decent Work and Economic Growth     |
 | **Team Leader**        | Louis Benedict Oen                          |
 | **University**         | Xiamen University Malaysia                  |
 | **Number of Members**  | 5                                           |
