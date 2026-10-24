@@ -1,12 +1,3 @@
-"""Future Skills Radar: shared logic for the app (v2).
-
-Everything here reads the files written by Jobridge_pipeline.ipynb:
-data/reference (dictionaries, roles, ILO exposure, courses, SDG links), data/cvs (synthetic CVs)
-and data/processed (monthly skill shares, AI Adoption Index, skill trends for every cutoff month,
-role profiles, role summary and the forecasting experiment).
-No language model is used at run time; every number comes from these files.
-"""
-
 from __future__ import annotations
 
 import json
@@ -27,7 +18,7 @@ MIN_MENTIONS = 30
 MIN_POSTS = 50
 STRENGTH = {"direct": 1.0, "supporting": 0.5, "baseline": 0.0}
 LEVEL_RANK = {"beginner": 0, "intermediate": 1, "advanced": 2}
-# Upgrade roles are "in your field" only for these current roles; for anyone else they count as a move.
+
 UPGRADE_FROM = {"senior_accounts": {"accounts_executive", "payroll_admin"},
                 "office_supervisor": {"admin_executive", "customer_service"}}
 EXPOSURE_RANK = {"Not Exposed": 0, "Minimal Exposure": 1, "Gradient 1": 2, "Gradient 2": 3, "Gradient 3": 4, "Gradient 4": 5}
@@ -36,7 +27,7 @@ PERSONAL_RE = re.compile(
     re.IGNORECASE | re.MULTILINE)
 
 
-# ---------------------------------------------------------------- loading
+# loading
 def load_data() -> dict:
     """Read every table the app needs. Raises FileNotFoundError if the pipeline has not been run."""
     d = {
@@ -82,7 +73,7 @@ def ai_scenarios(ai_hist, h=FORECAST_MONTHS, window=24):
     return {"moderate": np.clip(now + pace * steps, 0, 1), "fast": np.clip(now + 2 * pace * steps, 0, 1)}, pace, now
 
 
-# ---------------------------------------------------------------- CV reading
+# CV reading
 def compile_skill_patterns(skills: pd.DataFrame) -> dict:
     return {r.skill_id: re.compile(r.pattern, re.IGNORECASE) for r in skills.itertuples()}
 
@@ -116,7 +107,7 @@ def cost_label(row) -> str:
     return str(row.get("funding_route") or "cost not stated")
 
 
-# ---------------------------------------------------------------- matching, pathway, SDG
+# matching, pathway, SDG
 @dataclass
 class Radar:
     data: dict

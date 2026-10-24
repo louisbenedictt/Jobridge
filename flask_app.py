@@ -1,25 +1,3 @@
-"""JOBRIDGE: Flask backend (v2).
-
-Run locally:  python flask_app.py          (or: flask --app flask_app run)
-Then open     http://localhost:5000
-
-Pipeline:  Jobridge_pipeline.ipynb writes data/reference, data/cvs and data/processed;
-           core.py reads those files and does every calculation (matching, pathway, SDG scoring);
-           this file serves the page (templates/jobridge.html with static/jobridge.js) and the JSON API below.
-The page holds no data of its own: every number it shows comes from this API, which calls core.py.
-When the notebook is run again, the new data is picked up on the next request (no restart needed).
-
-API
-  GET  /api/meta                   cutoff months, SDG goals, skill dictionary, sample CVs, sample team, team roles
-  POST /api/extract                CV as JSON {"text"} or as a .txt/.pdf file (form field cv_file) -> skills found
-  POST /api/analyze                {cutoff, skills, sdg, sdg_weight, path_role} -> profile, role options, pathway
-  GET  /api/radar?cutoff=          AI Adoption Index and its two scenarios, rising and declining skills
-  GET  /api/skill?cutoff=&skill=   one skill's share of job posts and its 12 month scenarios
-  POST /api/team                   {cutoff, role, members: [{name, skills}]} -> team readiness grid
-  GET  /api/about?cutoff=          method, model backtest, fairness check, roles, sources
-Errors come back as {"error": message}: 400 bad input, 413 upload too large, 500 data files missing.
-"""
-
 import html
 import math
 import os
@@ -46,7 +24,7 @@ BADGE = {"now": "Where you are now", "upgrade": "Upgrade in your field", "move":
 PATH_LABEL = {"upgrade": "upgrade", "move": "move", "other": "not recommended", "now": "current role"}
 
 
-# ---------------------------------------------------------------- data
+# data
 _cache = {"version": None, "state": None}
 
 
@@ -89,7 +67,7 @@ def _build_state(data):
                      f"{summary.get('hn_posts', 0):,} job posts), retrieved {retrieved}."))
 
 
-# ---------------------------------------------------------------- formatting helpers
+# formatting helpers
 def joined(items):
     items = list(items)
     return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " or " + items[-1]
@@ -161,7 +139,7 @@ def as_float(value, default):
     return v if math.isfinite(v) else default
 
 
-# ---------------------------------------------------------------- JSON helpers
+# JSON helpers
 def plain(v):
     """A value JSON can carry: numpy scalars become Python numbers, NaN becomes null (JSON.parse rejects NaN)."""
     if isinstance(v, dict):
@@ -211,7 +189,7 @@ def _radar(g, cutoff):
     return trends, core.Radar(g.data, trends)
 
 
-# ---------------------------------------------------------------- matching, role cards and pathway
+# matching, role cards and pathway
 def rank_roles(radar, skill_set, sdg_pref, sdg_weight):
     """Every role with its match, SDG score and group, plus the closest current role.
     Groups: now = closest current role; origin = the other high exposure starting roles (not suggested);
@@ -310,7 +288,7 @@ def default_skill(trends, skills_df):
     return rising.sort_values("change_pp_moderate").index[-1] if len(rising) else skills_df["skill_id"].iloc[0]
 
 
-# ---------------------------------------------------------------- page, errors and static files
+# page, errors and static files
 @app.route("/")
 def home():
     get_data()   # missing data files show the error page instead of an empty app
@@ -344,7 +322,7 @@ def too_large(_err):
     return render_template("error.html", message=message), 413
 
 
-# ---------------------------------------------------------------- API
+# API
 @app.route("/api/meta")
 def api_meta():
     """Everything the page needs before the first calculation: controls, dictionary, sample CVs."""
@@ -584,7 +562,5 @@ def api_about():
 
 
 if __name__ == "__main__":
-    # Replit (and most hosts) pass the port in PORT and need the app reachable from outside the container;
-    # on a laptop it stays private on 127.0.0.1:5000.
     hosted = "PORT" in os.environ or "REPL_ID" in os.environ
     app.run(host="0.0.0.0" if hosted else "127.0.0.1", port=int(os.environ.get("PORT", 5000)), debug=False)
