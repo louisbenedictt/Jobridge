@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOBRIDGE</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231d4ed8'/><text x='16' y='21' font-size='13' font-family='sans-serif' font-weight='700' fill='white' text-anchor='middle'>JR</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans & IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Plotly.js, served by flask_app.py from the installed plotly package -->
+  <script src="{{ url_for('plotly_js') }}"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Clean Institutional & Editorial Design System — Zero Gradients */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    /* Flat Surface Cards */
+    .surface-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.03);
+    }
+
+    /* Section Header Bar */
+    .section-banner {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #1d4ed8;
+      border-radius: 0.5rem;
+      padding: 1.25rem 1.5rem;
+    }
+
+    /* Navigation Tabs */
+    #mainTabNav button {
+      border-bottom: 2px solid transparent;
+      padding: 0.75rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #64748b;
+      transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+    }
+    #mainTabNav button:hover {
+      color: #1d4ed8;
+      background-color: #f8fafc;
+    }
+    #mainTabNav button.tab-active {
+      border-bottom-color: #1d4ed8;
+      color: #1d4ed8;
+      font-weight: 600;
+      background-color: #eff6ff;
+    }
+
+    /* Solid Primary Button */
+    .btn-primary {
+      background-color: #1d4ed8;
+      color: #ffffff;
+      border: 1px solid #1e40af;
+      border-radius: 0.375rem;
+      transition: background-color 0.15s ease;
+    }
+    .btn-primary:hover {
+      background-color: #1e40af;
+    }
+
+    /* Removable Skill & SDG Tags */
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.375rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #bfdbfe;
+    }
+    .skill-pill button {
+      color: #3b82f6;
+    }
+    .skill-pill button:hover {
+      color: #1e3a8a;
+    }
+
+    .sdg-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 0.375rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      background-color: #f1f5f9;
+      color: #1e293b;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Clean Solid Range Sliders */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 5px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #1d4ed8;
+      cursor: pointer;
+      border: 2px solid #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    }
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background: #1e40af;
+    }
+
+    /* Market trend: coloured symbol and word only, no background */
+    .trend-rising { color: #047857; }
+    .trend-declining { color: #b91c1c; }
+    .trend-stable { color: #1d4ed8; }
+    .trend-limited { color: #64748b; }
+
+    /* Text the server sends as HTML (how it works, model reason, checks, disclosure) */
+    .md p { margin: 0.35rem 0; }
+    .md ul { list-style: disc; padding-left: 1.25rem; margin: 0.35rem 0; }
+    .md ol { list-style: decimal; padding-left: 1.25rem; margin: 0.35rem 0; }
+    .md li { margin: 0.3rem 0; }
+    .md a { color: #1d4ed8; text-decoration: underline; }
+
+    /* While the API is calculating */
+    #mainContent { transition: opacity 0.2s 0.15s; }
+    #mainContent.is-busy { opacity: 0.6; cursor: progress; }
+
+    /* Sidebar: a drawer over the page on small screens, a column that can be collapsed on large screens */
+    @media (max-width: 1023px) {
+      #appSidebar {
+        position: fixed; top: 0; bottom: 0; left: 0; z-index: 60; width: 18rem;
+        overflow-y: auto; border-radius: 0; transform: translateX(-100%); transition: transform 0.2s ease;
+      }
+      body.sidebar-open #appSidebar { transform: none; }
+      body.sidebar-open #sidebarBackdrop { display: block; }
+    }
+    @media (min-width: 1024px) {
+      #appSidebar { position: sticky; top: 5rem; max-height: calc(100vh - 6rem); overflow-y: auto; }
+      body.sidebar-collapsed #appSidebar { display: none; }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-blue-700 selection:text-white">
+
+  <!-- ================= TOP NAVIGATION HEADER ================= -->
+  <header class="sticky top-0 z-40 bg-white border-b border-slate-200">
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Left: Brand Identity -->
+        <div class="flex items-center gap-3">
+          <button id="sidebarToggle" onclick="toggleSidebar()" class="p-2 rounded-md border border-slate-200 text-slate-600 hover:bg-slate-50" title="Show or hide the model parameters" aria-controls="appSidebar" aria-expanded="true">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="w-9 h-9 rounded-md bg-blue-700 flex items-center justify-center text-white font-display font-bold text-sm tracking-wider">
+            JR
+          </div>
+          <span class="font-display font-bold text-base tracking-tight text-slate-900">JOBRIDGE</span>
+        </div>
+
+        <!-- Center: View Switcher (Worker / Student vs Team View HR) -->
+        <div class="flex items-center bg-slate-100 p-1 rounded-md border border-slate-200 text-xs font-medium">
+          <button id="btnRoleWorker" onclick="switchRole('worker')"
+            class="px-3 py-1.5 rounded bg-white text-blue-700 shadow-2xs font-semibold flex items-center gap-1.5 border border-slate-200/80">
+            <i class="fa-regular fa-user text-[11px]"></i>
+            <span>Individual View</span>
+          </button>
+          <button id="btnRoleHR" onclick="switchRole('hr')"
+            class="px-3 py-1.5 rounded text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+            <i class="fa-solid fa-table-cells text-[11px]"></i>
+            <span>Team View (HR)</span>
+          </button>
+        </div>
+
+        <!-- Right: Dataset Cutoff Indicator -->
+        <div class="hidden xl:flex items-center gap-2 text-xs">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-slate-50 text-slate-700 rounded border border-slate-200 font-mono text-[11px]">
+            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+            <span id="headerCutoffText">Cutoff: –</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= NOTIFICATION TOAST ================= -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-200 pointer-events-none bg-slate-900 text-white text-xs px-4 py-2.5 rounded-md shadow-lg flex items-center gap-2 border border-slate-700 max-w-md">
+    <i class="fa-solid fa-check text-blue-400 text-xs" id="toastIcon"></i>
+    <span id="toastMsg">Updated</span>
+  </div>
+
+  <!-- Darkens the page behind the sidebar drawer on small screens; a click closes the drawer -->
+  <div id="sidebarBackdrop" class="hidden fixed inset-0 z-50 bg-slate-900/40" onclick="toggleSidebar()"></div>
+
+  <!-- ================= MAIN WORKSPACE LAYOUT ================= -->
+  <div class="flex-grow max-w-[90rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex flex-col lg:flex-row gap-6 items-start">
+
+      <!-- ================================================================= -->
+      <!-- LEFT SIDEBAR: PARAMETERS & FILTERS                                -->
+      <!-- ================================================================= -->
+      <aside id="appSidebar" class="w-72 flex-shrink-0 surface-card p-5 space-y-5">
+
+        <div class="border-b border-slate-200 pb-3.5">
+          <div class="flex items-center justify-between">
+            <h2 class="font-display font-bold text-sm text-slate-900 uppercase tracking-wider">Model Parameters</h2>
+            <button onclick="toggleSidebar()" class="text-slate-400 hover:text-slate-700 text-sm" title="Hide the model parameters">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">
+            AI that supports your career decision. It does not make it for you.
+          </p>
+        </div>
+
+        <!-- 1. TREND DATA (TIME MACHINE SLIDER) -->
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-xs text-slate-800">Trend data window</span>
+            <span class="text-[11px] text-slate-400 cursor-help" title="Move this back to see what the system would have recommended earlier. Rankings change when the data changes.">
+              Time machine
+            </span>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <label for="cutoffSlider" class="text-slate-600">Use job data up to</label>
+              <span id="cutoffValueLabel" class="font-mono font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 text-[11px]">–</span>
+            </div>
+            <input type="range" id="cutoffSlider" min="0" max="0" step="1" value="0" oninput="handleCutoffChange(this.value)">
+            <div class="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
+              <span id="cutoffMinLabel">–</span>
+              <span id="cutoffMaxLabel">–</span>
+            </div>
+          </div>
+
+          <!-- Time Machine Active Notice -->
+          <div id="timeMachineAlert" class="hidden p-2.5 rounded bg-amber-50 border border-amber-200 text-amber-900 text-xs flex items-start gap-2">
+            <i class="fa-solid fa-clock-rotate-left text-amber-700 mt-0.5 text-[11px]"></i>
+            <span id="timeMachineAlertText" class="text-[11px] leading-snug"></span>
+          </div>
+
+          <p id="sidebarSourceCaption" class="text-[11px] text-slate-500 leading-relaxed bg-slate-50 p-2.5 rounded border border-slate-200/80">
+            Loading data sources…
+          </p>
+        </div>
+
+        <!-- 2. YOUR SDG PRIORITIES -->
+        <div class="space-y-3 pt-4 border-t border-slate-200">
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-xs text-slate-800">Your SDG priorities</span>
+            <button onclick="clearAllSdgs()" class="text-[11px] text-slate-400 hover:text-slate-700 underline">
+              Reset
+            </button>
+          </div>
+
+          <div>
+            <label class="text-xs text-slate-600 block mb-1.5">Goals you care about</label>
+            <div id="selectedSdgPills" class="min-h-[38px] p-2 bg-slate-50 border border-slate-200 rounded flex flex-wrap gap-1.5 mb-2">
+              <!-- Populated by JS -->
+            </div>
+
+            <select id="sdgAddSelect" onchange="addSdgPriority(this.value); this.value='';" class="w-full text-xs bg-white border border-slate-300 rounded px-2.5 py-1.5 text-slate-700 outline-none focus:border-blue-600">
+              <option value="">+ Add UN SDG Goal...</option>
+            </select>
+          </div>
+
+          <!-- SDG Weight Slider -->
+          <div class="pt-1">
+            <div class="flex items-center justify-between text-xs mb-1.5">
+              <label for="sdgWeightSlider" class="text-slate-600 leading-snug pr-2" title="0 = rank by skills match only. The original match is always shown.">
+                SDG ranking weight
+              </label>
+              <span id="sdgWeightLabel" class="font-mono font-semibold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 text-[11px]">0.15</span>
+            </div>
+            <input type="range" id="sdgWeightSlider" min="0" max="0.30" step="0.05" value="0.15" oninput="handleSdgWeightChange(this.value)">
+            <div class="flex justify-between text-[10px] text-slate-400 font-mono mt-1">
+              <span>0.00 (Skills only)</span>
+              <span>0.30 (Max)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Active Profile Summary -->
+        <div class="pt-4 border-t border-slate-200">
+          <div class="p-3 rounded bg-slate-50 border border-slate-200 space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-500">Recognised skills</span>
+              <span id="sidebarSkillCount" class="font-mono font-semibold text-slate-900">0</span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <span class="text-slate-500 whitespace-nowrap">Closest origin role</span>
+              <span id="sidebarCurrentRole" class="font-semibold text-slate-900 text-right">–</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-500">Forecast model</span>
+              <span id="sidebarModelName" class="font-mono text-[11px] text-blue-700">–</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ================================================================= -->
+      <!-- RIGHT MAIN CONTENT AREA                                           -->
+      <!-- ================================================================= -->
+      <div id="mainContent" class="flex-grow w-full min-w-0">
+
+        <!-- ================= VIEW 1: WORKER / STUDENT PORTAL ================= -->
+        <div id="workerSection" class="space-y-5">
+
+          <!-- Navigation Tabs -->
+          <div class="bg-white rounded-lg border border-slate-200 px-2 sm:px-4 sticky top-16 z-30">
+            <nav class="flex space-x-1 sm:space-x-3 overflow-x-auto" aria-label="Tabs" id="mainTabNav">
+              <button onclick="goToTab('tab-intake')" id="nav-tab-intake" class="tab-active whitespace-nowrap">Your Profile</button>
+              <button onclick="goToTab('tab-radar')" id="nav-tab-radar" class="whitespace-nowrap">Future Skills Radar</button>
+              <button onclick="goToTab('tab-jobs')" id="nav-tab-jobs" class="whitespace-nowrap">Job-Match</button>
+              <button onclick="goToTab('tab-pathway')" id="nav-tab-pathway" class="whitespace-nowrap">Course Pathway</button>
+              <button onclick="goToTab('tab-about')" id="nav-tab-about" class="whitespace-nowrap">About Jobridge</button>
+            </nav>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TAB 1: YOUR PROFILE                                            -->
+          <!-- ============================================================== -->
+          <div id="tab-intake" class="space-y-5">
+
+            <div class="section-banner">
+              <h2 class="text-lg font-display font-bold text-slate-900">Tell us about yourself</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                Select an input method below. Skills are matched against a fixed dictionary of verified competencies, paired with direct evidence from your text and current market direction.
+              </p>
+            </div>
+
+            <div class="surface-card p-5 sm:p-6 space-y-5">
+              <!-- 4 Radio Modes -->
+              <div>
+                <label class="text-xs font-semibold text-slate-700 block mb-2">Choose how</label>
+                <div class="flex flex-wrap gap-2" id="profileModeSelector">
+                  <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-md border border-blue-600 bg-blue-50 text-blue-800 font-semibold text-xs" id="lblModeSample">
+                    <input type="radio" name="profileMode" value="sample" checked onchange="switchProfileMode('sample')" class="accent-blue-700">
+                    <span>Use a sample CV</span>
+                  </label>
+                  <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs" id="lblModeUpload">
+                    <input type="radio" name="profileMode" value="upload" onchange="switchProfileMode('upload')" class="accent-blue-700">
+                    <span>Upload my CV</span>
+                  </label>
+                  <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs" id="lblModePaste">
+                    <input type="radio" name="profileMode" value="paste" onchange="switchProfileMode('paste')" class="accent-blue-700">
+                    <span>Paste CV text</span>
+                  </label>
+                  <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs" id="lblModeList">
+                    <input type="radio" name="profileMode" value="list" onchange="switchProfileMode('list')" class="accent-blue-700">
+                    <span>Pick skills from a list</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- MODE 1: Sample CV -->
+              <div id="modeSampleBox" class="space-y-3 pt-1">
+                <label for="sampleCvSelect" class="text-xs font-medium text-slate-700 block">
+                  Sample CV (synthetic, not a real person)
+                </label>
+                <select id="sampleCvSelect" onchange="handleSampleCvChange(this.value)" class="w-full sm:w-2/3 text-xs sm:text-sm bg-white border border-slate-300 rounded-md px-3 py-2 text-slate-800 outline-none focus:border-blue-600">
+                  <!-- Populated by JS -->
+                </select>
+
+                <details class="group bg-slate-50 rounded-md border border-slate-200 overflow-hidden">
+                  <summary class="cursor-pointer px-3.5 py-2 text-xs font-medium text-slate-700 flex items-center justify-between select-none hover:bg-slate-100">
+                    <span class="flex items-center gap-2">
+                      <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-open:rotate-90 transition-transform"></i>
+                      <span>Show the CV</span>
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-400">Plaintext</span>
+                  </summary>
+                  <pre id="sampleCvRawText" class="p-3.5 text-xs font-mono text-slate-700 bg-white border-t border-slate-200 whitespace-pre-wrap leading-relaxed max-h-60 overflow-y-auto"></pre>
+                </details>
+              </div>
+
+              <!-- MODE 2: Upload CV -->
+              <div id="modeUploadBox" class="hidden pt-1">
+                <div onclick="document.getElementById('cvFileInput').click()"
+                     class="border-2 border-dashed border-slate-300 hover:border-blue-600 rounded-lg p-7 text-center cursor-pointer bg-slate-50 hover:bg-blue-50/30 transition">
+                  <input type="file" id="cvFileInput" class="hidden" accept=".pdf,.txt" onchange="handleCvUpload(event)">
+                  <div class="w-10 h-10 mx-auto rounded-md bg-white border border-slate-200 flex items-center justify-center text-blue-700 mb-2.5">
+                    <i class="fa-solid fa-file-arrow-up text-base"></i>
+                  </div>
+                  <p class="text-xs sm:text-sm font-semibold text-slate-800">Click to select a .pdf or .txt CV file</p>
+                  <p class="text-xs text-slate-500 mt-0.5">Read in memory on the server and not stored. Personal identifiers are stripped prior to matching.</p>
+                  <div id="fileStatusLabel" class="mt-2.5 text-xs font-mono text-blue-700 font-semibold hidden"></div>
+                </div>
+              </div>
+
+              <!-- MODE 3: Paste CV -->
+              <div id="modePasteBox" class="hidden space-y-2.5 pt-1">
+                <label class="text-xs font-medium text-slate-700 block">Paste your CV text</label>
+                <textarea id="rawResumeInput" rows="6"
+                  placeholder="Paste your work experience and skills here (e.g., Managed AutoCount, accounts payable, audit schedules, Excel pivot tables, month end closing, SST tax, MyInvois)..."
+                  class="w-full text-xs p-3 bg-white border border-slate-300 rounded-md outline-none focus:border-blue-600 font-mono leading-relaxed"></textarea>
+                <button onclick="submitPastedCv()" class="btn-primary px-4 py-2 text-xs font-semibold">
+                  Extract skills from text
+                </button>
+              </div>
+
+              <!-- MODE 4: Pick from list -->
+              <div id="modeListBox" class="hidden pt-1">
+                <div class="p-3 rounded-md bg-blue-50 border border-blue-200 text-xs text-blue-900">
+                  Use the dropdown selector below to manually add or remove skills from the verified competency list.
+                </div>
+              </div>
+
+              <!-- Skill Multi-Select Editor -->
+              <div class="pt-4 border-t border-slate-200 space-y-2.5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <div class="text-xs sm:text-sm text-slate-800">
+                    <strong>Check and correct your skills.</strong>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span id="skillCountBadge" class="text-xs font-mono font-semibold px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200">
+                      0 skills
+                    </span>
+                    <button onclick="clearAllSkills()" class="text-xs text-slate-500 hover:text-red-700 underline">
+                      Clear all
+                    </button>
+                  </div>
+                </div>
+
+                <div class="p-3 bg-slate-50 border border-slate-200 rounded-md space-y-3">
+                  <div id="extractedSkillsContainer" class="flex flex-wrap gap-1.5 min-h-[34px]">
+                    <!-- Skill pills injected here -->
+                  </div>
+
+                  <div class="pt-2 border-t border-slate-200">
+                    <select id="addSkillDropdown" onchange="addSkillFromList(this.value); this.value='';" class="w-full sm:w-96 text-xs bg-white border border-slate-300 rounded px-2.5 py-1.5 text-slate-700 outline-none focus:border-blue-600">
+                      <option value="">+ Add a skill from the dictionary...</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Evidence & Market Trend Table -->
+              <div class="pt-1 space-y-2">
+                <div class="overflow-x-auto rounded-md border border-slate-200">
+                  <table class="w-full text-left text-xs">
+                    <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+                      <tr>
+                        <th class="py-2.5 px-4 w-5/12">Skill</th>
+                        <th class="py-2.5 px-4 w-4/12">Evidence in your CV</th>
+                        <th class="py-2.5 px-4 w-3/12">Market trend (<span id="tableCutoffLabel">–</span>)</th>
+                      </tr>
+                    </thead>
+                    <tbody id="profileSkillsTableBody" class="divide-y divide-slate-200 bg-white">
+                      <!-- Populated dynamically -->
+                    </tbody>
+                  </table>
+                </div>
+
+                <p id="privacyNote" class="text-[11px] text-slate-500 leading-relaxed"></p>
+              </div>
+
+              <!-- Step 1 -> Step 2 Footer Bar -->
+              <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+                <span class="text-xs text-slate-500">Next: market trend analysis</span>
+                <button onclick="goToTab('tab-radar')" class="btn-primary px-4 py-2 text-xs font-semibold flex items-center gap-2">
+                  <span>Continue to Future Skills Radar</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TAB 2: FUTURE SKILLS RADAR                                     -->
+          <!-- ============================================================== -->
+          <div id="tab-radar" class="hidden space-y-5">
+
+            <div class="section-banner">
+              <h2 class="text-lg font-display font-bold text-slate-900">Future Skills Radar</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                Forecasting the AI Adoption Index and individual skill demand from monthly job postings. Adjust the <strong>"Use job data up to"</strong> slider in the sidebar to inspect historical snapshots.
+              </p>
+            </div>
+
+            <!-- 3 Metric Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="surface-card p-4">
+                <div class="flex items-center justify-between text-xs text-slate-500">
+                  <span>AI Adoption Index now</span>
+                  <i class="fa-regular fa-circle-question text-slate-400" title="Share of job posts mentioning generative AI, last 3 months"></i>
+                </div>
+                <div id="metricAiNow" class="text-2xl font-display font-bold text-slate-900 mt-1">–</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Observed 3-month rolling share</div>
+              </div>
+
+              <div class="surface-card p-4">
+                <div class="flex items-center justify-between text-xs text-slate-500">
+                  <span>In 12 months, moderate AI</span>
+                  <i class="fa-regular fa-circle-question text-slate-400" title="AI adoption keeps its pace of the last 24 months"></i>
+                </div>
+                <div id="metricAiModerate" class="text-2xl font-display font-bold text-blue-700 mt-1">–</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Recent 24-month pace continues</div>
+              </div>
+
+              <div class="surface-card p-4">
+                <div class="flex items-center justify-between text-xs text-slate-500">
+                  <span>In 12 months, fast AI</span>
+                  <i class="fa-regular fa-circle-question text-slate-400" title="AI adoption grows twice as fast"></i>
+                </div>
+                <div id="metricAiFast" class="text-2xl font-display font-bold text-emerald-700 mt-1">–</div>
+                <div class="text-[11px] text-slate-400 mt-0.5">Adoption grows twice as fast (2×)</div>
+              </div>
+            </div>
+
+            <!-- Chart 1: AI Adoption Index -->
+            <div class="surface-card p-5 space-y-2">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <h3 class="font-display font-bold text-sm text-slate-900">
+                  AI Adoption Index: share of job posts that mention generative AI
+                </h3>
+                <span class="text-[11px] font-mono text-slate-400">Monthly time series</span>
+              </div>
+              <div id="aiAdoptionChart" class="w-full h-[320px]"></div>
+              <p id="aiChartCaption" class="text-[11px] text-slate-500 pt-1 border-t border-slate-100"></p>
+            </div>
+
+            <!-- Rising vs Declining Tables -->
+            <div class="surface-card p-5 space-y-4">
+              <div>
+                <h3 class="font-display font-bold text-sm text-slate-900">Which skills are rising and declining?</h3>
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Click any skill row below to load its 12-month forecast chart.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+                <!-- Rising Table -->
+                <div class="space-y-2">
+                  <div class="text-xs font-semibold text-slate-800 flex items-center gap-1.5">
+                    <span class="trend-rising font-mono font-semibold text-[11px]">▲ Rising</span>
+                    <span id="risingCountLabel" class="text-slate-500 font-normal"></span>
+                  </div>
+                  <div class="overflow-x-auto rounded border border-slate-200 max-h-72 overflow-y-auto">
+                    <table class="w-full text-left text-xs">
+                      <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200 sticky top-0">
+                        <tr>
+                          <th class="py-2 px-3">Skill</th>
+                          <th class="py-2 px-3">Now</th>
+                          <th class="py-2 px-3">In 12 months</th>
+                        </tr>
+                      </thead>
+                      <tbody id="risingTableBody" class="divide-y divide-slate-200"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Declining Table -->
+                <div class="space-y-2">
+                  <div class="text-xs font-semibold text-slate-800 flex items-center gap-1.5">
+                    <span class="trend-declining font-mono font-semibold text-[11px]">▼ Declining</span>
+                    <span id="decliningCountLabel" class="text-slate-500 font-normal"></span>
+                  </div>
+                  <div class="overflow-x-auto rounded border border-slate-200 max-h-72 overflow-y-auto">
+                    <table class="w-full text-left text-xs">
+                      <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200 sticky top-0">
+                        <tr>
+                          <th class="py-2 px-3">Skill</th>
+                          <th class="py-2 px-3">Now</th>
+                          <th class="py-2 px-3">In 12 months</th>
+                        </tr>
+                      </thead>
+                      <tbody id="decliningTableBody" class="divide-y divide-slate-200"></tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+
+              <p id="trendCaption" class="text-[11px] text-slate-500 leading-relaxed"></p>
+            </div>
+
+            <!-- Explore One Skill -->
+            <div class="surface-card p-5 space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">Explore one skill</h3>
+                  <p class="text-xs text-slate-500">Historical 3-month rolling share and 12-month scenario projections.</p>
+                </div>
+                <div class="w-full sm:w-80">
+                  <select id="exploreSkillSelect" onchange="handleExploreSkillChange(this.value)" class="w-full text-xs bg-white border border-slate-300 rounded px-3 py-2 text-slate-800 outline-none focus:border-blue-600">
+                    <!-- Populated by JS -->
+                  </select>
+                </div>
+              </div>
+
+              <div id="singleSkillChart" class="w-full h-[300px]"></div>
+              <p id="singleSkillCaption" class="text-[11px] text-slate-500 pt-1 border-t border-slate-100"></p>
+
+              <div class="pt-3 border-t border-slate-200 flex items-center justify-between">
+                <span class="text-xs text-slate-500">Next: role matches</span>
+                <button onclick="goToTab('tab-jobs')" class="btn-primary px-4 py-2 text-xs font-semibold flex items-center gap-2">
+                  <span>Continue to Job-Match</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TAB 3: YOUR OPTIONS                                            -->
+          <!-- ============================================================== -->
+          <div id="tab-jobs" class="hidden space-y-5">
+
+            <div class="section-banner">
+              <h2 class="text-lg font-display font-bold text-slate-900">Your options</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                Comparing your closest current role against field upgrades and lower-exposure roles (ILO Working Paper 140), ranked by skill match and your SDG priorities.
+              </p>
+            </div>
+
+            <div id="optionsEmpty" class="p-3.5 rounded-md bg-blue-50 border border-blue-200 text-blue-900 text-xs flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-info text-blue-700"></i>
+              <span>Add your skills in Your Profile first.</span>
+            </div>
+
+            <div id="optionsContent" class="hidden space-y-5">
+              <!-- 1. Where you are now -->
+              <div class="space-y-2">
+                <div>
+                  <h3 class="text-sm font-display font-bold text-slate-900">Where you are now</h3>
+                  <p id="currentCaption" class="text-xs text-slate-500"></p>
+                </div>
+                <div id="currentRoleContainer"></div>
+              </div>
+
+              <!-- 2. Upgrade in your field -->
+              <div class="space-y-2 pt-2">
+                <div>
+                  <h3 class="text-sm font-display font-bold text-slate-900">Upgrade in your field</h3>
+                  <p class="text-xs text-slate-500">
+                    Same field, one level up: more judgement and review, less routine processing.
+                  </p>
+                </div>
+                <div id="upgradeRolesContainer" class="space-y-3"></div>
+              </div>
+
+              <!-- 3. Move to a role less exposed to AI -->
+              <div class="space-y-2 pt-2">
+                <div>
+                  <h3 class="text-sm font-display font-bold text-slate-900">Move to a role less exposed to AI</h3>
+                  <p id="moveCaption" class="text-xs text-slate-500"></p>
+                </div>
+                <div id="moveRolesContainer" class="space-y-3"></div>
+              </div>
+
+              <!-- 4. Other roles checked -->
+              <details class="surface-card overflow-hidden group">
+                <summary class="cursor-pointer p-4 text-xs font-semibold text-slate-700 flex items-center justify-between hover:bg-slate-50 select-none">
+                  <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-chevron-right text-[10px] text-slate-400 group-open:rotate-90 transition-transform"></i>
+                    <span id="otherRolesSummaryTitle">Other roles we checked but do not recommend</span>
+                  </span>
+                  <span class="text-[11px] font-mono text-slate-400">Filter criteria</span>
+                </summary>
+                <div class="p-4 border-t border-slate-200 bg-slate-50 overflow-x-auto">
+                  <table class="w-full text-left text-xs">
+                    <thead class="bg-white text-slate-600 border-b border-slate-200">
+                      <tr>
+                        <th class="py-2 px-3">Role</th>
+                        <th class="py-2 px-3">Skills match</th>
+                        <th class="py-2 px-3">GenAI exposure (ILO)</th>
+                        <th class="py-2 px-3">Transferability</th>
+                        <th class="py-2 px-3">Job posts</th>
+                        <th class="py-2 px-3">Why not recommended</th>
+                      </tr>
+                    </thead>
+                    <tbody id="otherRolesTableBody" class="divide-y divide-slate-200 bg-white"></tbody>
+                  </table>
+                </div>
+              </details>
+
+              <div class="p-3.5 rounded-md bg-blue-50 border border-blue-200 text-blue-900 text-xs flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-info text-blue-700"></i>
+                <span>These are estimates to support your decision. You choose your path; this tool never makes hiring decisions.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TAB 4: YOUR PATHWAY                                            -->
+          <!-- ============================================================== -->
+          <div id="tab-pathway" class="hidden space-y-5">
+
+            <div class="section-banner flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h2 class="text-lg font-display font-bold text-slate-900">Your pathway</h2>
+                <p class="text-xs text-slate-600 mt-1">
+                  Step-by-step learning plan ordered from beginner upwards using verified free or low-cost courses.
+                </p>
+              </div>
+              <div id="pathwayRoleBox" class="hidden w-full md:w-80">
+                <label for="pathwayRoleSelect" class="text-[11px] font-semibold text-slate-600 block mb-1">Plan a pathway to</label>
+                <select id="pathwayRoleSelect" onchange="handlePathwayRoleSelect(this.value)" class="w-full text-xs bg-white border border-slate-300 rounded px-3 py-2 text-slate-900 outline-none focus:border-blue-600">
+                  <!-- Populated by JS -->
+                </select>
+              </div>
+            </div>
+
+            <div id="pathwayEmpty" class="p-3.5 rounded-md bg-blue-50 border border-blue-200 text-blue-900 text-xs flex items-center gap-2.5">
+              <i class="fa-solid fa-circle-info text-blue-700"></i>
+              <span>Add your skills in Your Profile first.</span>
+            </div>
+
+            <div id="pathwayContent" class="hidden space-y-5">
+              <!-- 4 Pathway Summary Metrics -->
+              <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="surface-card p-4">
+                  <div class="text-xs text-slate-500">Match now</div>
+                  <div id="pathMetricNow" class="text-xl font-display font-bold text-slate-900 mt-1">–</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Moderate to fast AI</div>
+                </div>
+                <div class="surface-card p-4">
+                  <div class="text-xs text-slate-500">Match after this pathway</div>
+                  <div id="pathMetricAfter" class="text-xl font-display font-bold text-blue-700 mt-1">–</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Estimated post-course match</div>
+                </div>
+                <div class="surface-card p-4">
+                  <div class="text-xs text-slate-500">Study time stated</div>
+                  <div id="pathMetricHours" class="text-xl font-display font-bold text-slate-900 mt-1">–</div>
+                  <div id="pathMetricHoursSub" class="text-[11px] text-slate-400 mt-0.5">Provider hours</div>
+                </div>
+                <div class="surface-card p-4">
+                  <div class="text-xs text-slate-500">GenAI exposure</div>
+                  <div id="pathMetricExposure" class="text-xl font-display font-bold text-emerald-700 mt-1">–</div>
+                  <div id="pathMetricExposureSub" class="text-[11px] text-slate-400 mt-0.5"></div>
+                </div>
+              </div>
+
+              <!-- Step-by-Step Course Plan -->
+              <div class="surface-card p-5 space-y-4">
+                <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+                  <div>
+                    <h3 class="font-display font-bold text-sm text-slate-900">Your step by step plan</h3>
+                    <p class="text-xs text-slate-500">Courses come only from our checked catalogue of free or low-cost providers.</p>
+                  </div>
+                  <span id="pathwayStepsCountBadge" class="text-xs font-mono font-semibold px-2.5 py-0.5 bg-blue-50 text-blue-700 rounded border border-blue-200">
+                    0 steps
+                  </span>
+                </div>
+
+                <div id="pathwayStepsContainer" class="space-y-3"></div>
+                <p id="courseCaption" class="text-[11px] text-slate-500 leading-relaxed"></p>
+              </div>
+
+              <!-- How this path connects to the SDGs -->
+              <div class="surface-card p-5 space-y-3">
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">How this path connects to the SDGs</h3>
+                  <p class="text-xs text-slate-500">Specific UN Sustainable Development Goal targets supported by this role and its skills.</p>
+                </div>
+
+                <div id="pathwaySdgLinksContainer" class="space-y-2.5"></div>
+
+                <p class="text-[11px] text-slate-400 pt-2 border-t border-slate-100">
+                  Every skill you learn also counts towards SDG target 4.4: relevant skills for decent jobs. SDG links were drafted with Claude (Anthropic) and reviewed by the team. Official targets: sdgs.un.org/goals
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ============================================================== -->
+          <!-- TAB 5: ABOUT, MODEL & SOURCES                                  -->
+          <!-- ============================================================== -->
+          <div id="tab-about" class="hidden space-y-5">
+
+            <div class="section-banner">
+              <h2 class="text-lg font-display font-bold text-slate-900">About, model and sources</h2>
+              <p class="text-xs text-slate-600 mt-1">
+                Methodology, forecasting model backtest evaluation, and demographic fairness verification.
+              </p>
+            </div>
+
+            <div class="surface-card p-5 space-y-3">
+              <h3 class="font-display font-bold text-sm text-slate-900">How it works</h3>
+              <div id="aboutHow" class="md text-xs text-slate-700 leading-relaxed"></div>
+            </div>
+
+            <div class="surface-card p-5 space-y-2">
+              <h3 class="font-display font-bold text-sm text-slate-900">Which forecasting model, and why?</h3>
+              <p id="modelChartSubtitle" class="text-xs text-slate-500"></p>
+              <div id="modelBacktestChart" class="w-full h-[260px]"></div>
+              <div id="modelReason" class="md text-xs text-slate-700 leading-relaxed"></div>
+              <p class="text-[11px] text-slate-500 leading-relaxed">
+                Rolling backtest: at each forecast origin every 3 months, each model sees only the data up to that month and forecasts 6 and 12 months ahead; forecasts are compared with what happened. Selection rule, fixed in advance: among models that respond to the AI scenario, the lowest error at 12 months.
+              </p>
+            </div>
+
+            <div id="fairnessBox" class="hidden p-4 rounded-md border text-xs flex items-center gap-3"></div>
+
+            <div class="surface-card p-5 space-y-2">
+              <h3 class="font-display font-bold text-sm text-slate-900">Other checks</h3>
+              <div id="aboutChecks" class="md text-xs text-slate-700 leading-relaxed"></div>
+            </div>
+
+            <div class="surface-card p-5 space-y-2">
+              <h3 class="font-display font-bold text-sm text-slate-900">Which roles are recommended, and why?</h3>
+              <div class="overflow-x-auto rounded border border-slate-200">
+                <table class="w-full text-left text-xs">
+                  <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+                    <tr>
+                      <th class="py-2 px-3">Role</th>
+                      <th class="py-2 px-3">Type</th>
+                      <th class="py-2 px-3">ISCO</th>
+                      <th class="py-2 px-3">GenAI exposure (ILO)</th>
+                      <th class="py-2 px-3">ILO score</th>
+                      <th class="py-2 px-3">Job posts</th>
+                      <th class="py-2 px-3">Transferability</th>
+                      <th class="py-2 px-3">Recommended</th>
+                      <th class="py-2 px-3">Why not</th>
+                    </tr>
+                  </thead>
+                  <tbody id="rolesTableBody" class="divide-y divide-slate-200 bg-white"></tbody>
+                </table>
+              </div>
+              <p id="rolesCaption" class="text-[11px] text-slate-500"></p>
+            </div>
+
+            <div class="surface-card p-5 space-y-2">
+              <h3 class="font-display font-bold text-sm text-slate-900">Data sources</h3>
+              <div class="overflow-x-auto rounded border border-slate-200">
+                <table class="w-full text-left text-xs">
+                  <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+                    <tr>
+                      <th class="py-2 px-3">Source</th>
+                      <th class="py-2 px-3">Publisher</th>
+                      <th class="py-2 px-3">Type</th>
+                      <th class="py-2 px-3">Used for</th>
+                    </tr>
+                  </thead>
+                  <tbody id="sourcesTableBody" class="divide-y divide-slate-200 bg-white"></tbody>
+                </table>
+              </div>
+              <p id="sourcesCaption" class="text-[11px] text-slate-500"></p>
+            </div>
+
+            <div class="surface-card p-5 space-y-2">
+              <h3 class="font-display font-bold text-sm text-slate-900">AI disclosure and limitations</h3>
+              <div id="aboutDisclosure" class="md text-xs text-slate-700 leading-relaxed"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ================= VIEW 2: TEAM VIEW (HR) ================= -->
+        <div id="hrSection" class="hidden space-y-5">
+
+          <div class="section-banner flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 class="text-lg font-display font-bold text-slate-900">Workforce Readiness Heatmap & Cohort Skill Gaps</h2>
+              <p id="teamCaption" class="text-xs text-slate-600 mt-1"></p>
+            </div>
+            <div class="w-full md:w-72">
+              <label for="teamRoleSelect" class="text-[11px] font-semibold text-slate-600 block mb-1">Role</label>
+              <select id="teamRoleSelect" onchange="refreshTeam()" class="w-full text-xs bg-white border border-slate-300 rounded px-3 py-2 text-slate-900 outline-none focus:border-blue-600">
+                <!-- Populated by JS -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Whose CVs -->
+          <div class="surface-card p-5 space-y-3">
+            <label class="text-xs font-semibold text-slate-700 block">Whose CVs?</label>
+            <div class="flex flex-wrap gap-2">
+              <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-md border border-blue-600 bg-blue-50 text-blue-800 font-semibold text-xs" id="lblTeamSample">
+                <input type="radio" name="teamSource" value="sample" checked onchange="switchTeamSource('sample')" class="accent-blue-700">
+                <span>Use the sample team</span>
+              </label>
+              <label class="cursor-pointer inline-flex items-center gap-2 px-3.5 py-2 rounded-md border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs" id="lblTeamUpload">
+                <input type="radio" name="teamSource" value="upload" onchange="switchTeamSource('upload')" class="accent-blue-700">
+                <span>Upload my team's CVs</span>
+              </label>
+            </div>
+            <div id="teamUploadBox" class="hidden space-y-2.5">
+              <div onclick="document.getElementById('teamFileInput').click()"
+                   class="border-2 border-dashed border-slate-300 hover:border-blue-600 rounded-lg p-5 text-center cursor-pointer bg-slate-50 hover:bg-blue-50/30 transition">
+                <input type="file" id="teamFileInput" class="hidden" accept=".pdf,.txt" multiple onchange="handleTeamUpload(event)">
+                <p class="text-xs sm:text-sm font-semibold text-slate-800"><i class="fa-solid fa-users text-blue-700 mr-1.5"></i>Click to add team CVs (.pdf or .txt, several at once)</p>
+                <p class="text-xs text-slate-500 mt-0.5">A file with the same name replaces the earlier one.</p>
+              </div>
+              <div id="teamMemberChips" class="flex flex-wrap gap-1.5"></div>
+            </div>
+          </div>
+
+          <div id="teamEmpty" class="hidden p-3.5 rounded-md bg-blue-50 border border-blue-200 text-blue-900 text-xs flex items-center gap-2.5">
+            <i class="fa-solid fa-circle-info text-blue-700"></i>
+            <span>Upload your team's CVs to see their readiness for this role.</span>
+          </div>
+
+          <div id="teamResult" class="space-y-5">
+            <div class="surface-card p-5 space-y-3">
+              <h3 class="font-display font-bold text-sm text-slate-900" id="teamHeatmapTitle">Team readiness</h3>
+              <div id="teamNoProfile" class="hidden p-3 rounded bg-amber-50 border border-amber-200 text-amber-900 text-xs"></div>
+              <div id="teamHeatmapChart" class="w-full h-[320px]"></div>
+            </div>
+
+            <div class="surface-card p-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="font-display font-bold text-sm text-slate-900">Skills missing across the team</h3>
+                  <p class="text-xs text-slate-500">Sorted by number of team members missing the competency (Data cutoff: <span id="hrCutoffLabel" class="font-mono">–</span>).</p>
+                </div>
+                <button onclick="exportTeamCsv()" class="btn-primary px-3 py-1.5 text-xs font-semibold flex items-center gap-1.5">
+                  <i class="fa-solid fa-download text-[11px]"></i> Export CSV
+                </button>
+              </div>
+              <div class="overflow-x-auto rounded border border-slate-200">
+                <table class="w-full text-left text-xs">
+                  <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+                    <tr>
+                      <th class="py-2 px-4">Skill</th>
+                      <th class="py-2 px-4">People missing it</th>
+                      <th class="py-2 px-4">Market trend</th>
+                    </tr>
+                  </thead>
+                  <tbody id="teamMissingTableBody" class="divide-y divide-slate-200"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Application logic: calls the Flask API (flask_app.py) and draws the results -->
+  <script src="{{ url_for('static', filename='jobridge.js') }}"></script>
+</body>
+</html>
