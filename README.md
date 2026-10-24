@@ -52,9 +52,9 @@ Scalable and accessible. As a web app, it can serve many students and workers at
 
 ### Key Features
 
-- **Feature 1** — Short description.
-- **Feature 2** — Short description.
-- **Feature 3** — Short description.
+- **Dynamic Skills and Jobs Trend** — Tracks changes in job markets and skills, so users can see which jobs and skills are becoming more or less in demand.
+- **ILO Research-Based AI Jobs replacement Risk** — Uses ILO research to estimate how likely a job is to be affected by AI, helping users better understand their future career risks.
+- **Personalized Reskilling Pathways** — Recommends skills users need to improve and provides learning resources to help them prepare for their target jobs.
 
 ### Tech Stack
 
