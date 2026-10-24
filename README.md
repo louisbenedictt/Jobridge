@@ -23,8 +23,8 @@
 | Replit Project    | https://replit.com/@gwentiffany37/Jobridge     |
 | Live Demo         | https://jobridge.replit.app/                   |
 | RunPod Endpoint   | -                                              |
-| Slide Deck        | https://example.com/slides                     |
-| Demo Video        | https://example.com/demo-video                 |
+| Slide Deck        | https://drive.google.com/file/d/1S4XaumOntapxHaOque2b1lyZSIe7g1MQ/view?usp=sharingslides                     |
+| Demo Video        | https://youtu.be/7c0RkoZdOZodemo-video                 |
 
 ---
 
