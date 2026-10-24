@@ -20,9 +20,9 @@
 | Resource          | Link                                           |
 | ----------------- | ---------------------------------------------- |
 | GitHub Repository | https://github.com/louisbenedictt/Jobridge     |
-| Replit Project    | https://replit.com/@your-username/your-project |
-| Live Demo         | https://your-project.replit.app                |
-| RunPod Endpoint   | https://api.runpod.ai/v2/your-endpoint-id      |
+| Replit Project    | https://replit.com/@gwentiffany37/Jobridge     |
+| Live Demo         | https://jobridge.replit.app/                   |
+| RunPod Endpoint   | -                                              |
 | Slide Deck        | https://example.com/slides                     |
 | Demo Video        | https://example.com/demo-video                 |
 
@@ -60,10 +60,10 @@ Scalable and accessible. As a web app, it can serve many students and workers at
 
 | Layer         | Technology                   |
 | ------------- | ---------------------------- |
-| Frontend      | HTML,CSS,Java Script         |
-| Backend       | Python, Flask         |
-| Database      | e.g. PostgreSQL, SQLite      |
-| AI / Compute  | RunPod (GPU)                 |
+| Frontend      | HTML,CSS Tailwind,Java Script|
+| Backend       | Python, Flask                |
+| Database      | -                            |
+| AI / Compute  | - (runpod is not required)   |
 | Hosting / Dev | Replit                       |
 
 ---
@@ -71,106 +71,104 @@ Scalable and accessible. As a web app, it can serve many students and workers at
 ## Project Structure
 
 ```
-.
-├── docs/                    # Screenshots, diagrams
-├── runpod/
-│   └── handler.py           # RunPod serverless handler (GPU workload)
-├── src/
-│   ├── main.py              # Application entry point
-│   └── utils.py             # Helper functions
-├── submission/              # Required submission documents
-│   ├── REPLIT PROOF OF USE.pdf
-│   ├── RUNPOD PROOF OF USE.pdf
-│   └── Submission Template SDC Hackathon.pdf
+Jobridge
+├── data/
+│   ├── cvs/
+│   │   ├── _version.txt
+│   │   ├── cv01_accounts_executive.txt
+│   │   ├── cv02_admin_executive.txt
+│   │   ├── cv03_finance_executive.txt
+│   │   ├── cv04_fresh_graduate.txt
+│   │   ├── cv05_customer_ops.txt
+│   │   ├── cv06_payroll_admin.txt
+│   │   ├── cv07a_twin.txt
+│   │   └── cv07b_twin.txt
+│   ├── processed/
+│   │   ├── ai_index_monthly.csv
+│   │   ├── model_experiment.csv
+│   │   ├── recommendations_sample_cvs.csv
+│   │   ├── role_post_counts.csv
+│   │   ├── role_profiles.csv
+│   │   ├── role_summary.csv
+│   │   ├── sdg_map.csv
+│   │   ├── skill_share_monthly.csv
+│   │   ├── skill_trends_by_cutoff.csv.gz
+│   │   ├── skill_trends.csv
+│   │   ├── summary.json
+│   │   └── time_machine.csv
+│   └── reference/
+│       ├── _version.txt
+│       ├── ai_terms.csv
+│       ├── courses.csv
+│       ├── ilo_exposure.csv
+│       ├── roles.csv
+│       ├── sdg_goals.csv
+│       ├── sdg_links.csv
+│       ├── sdg_targets.csv
+│       ├── skills.csv
+│       └── sources.csv
+├── static/
+│   └── jobbridge.js
+├── submission/
+│   └── REPLIT PROOF OF USE.pdf
+├── templates/
+│   ├── error.html
+│   └── jobbridge.html
 ├── tests/
-│   └── test_utils.py        # Unit tests
-├── .env.example             # Example environment variables
 ├── .gitignore
-├── .replit                  # Replit run configuration
+├── .replit
+├── core.py
+├── flask_app.py
+├── Jobbridge_pipeline.ipynb
 ├── LICENSE
-├── requirements.txt         # Python dependencies
-└── README.md
-```
+├── postings.csv
+├── README.md
+└── requirements.txt
 
 ### Architecture
 
 ```
-User ──► Replit (App / API) ──► RunPod Endpoint (GPU model)
-                │
-                └──► Response returned to user
+User (Browser)
+      │
+      ├── (HTTP Request: GET / POST)
+      ▼
+┌─────────────────────────────────────────────────────────────┐
+│ Replit Hosting Environment                                  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │ Flask App (flask_app.py)                              │  │
+│  │   ├── Routing & Controller                            │  │
+│  │   └── Template Rendering (templates/jobbridge.html)   │  │
+│  └──────────────┬────────────────────────────────────────┘  │
+│                 │                                           │
+│                 ▼                                           │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │ Core Logic & Pipeline (core.py / Jobbridge_pipeline)  │  │
+│  │   ├── Data Processing & CV Parsing                    │  │
+│  │   ├── Explainable Matching & Scoring                  │  │
+│  │   └── SDG & Reskilling Pathway Logic                  │  │
+│  └──────────────┬────────────────────────────────────────┘  │
+│                 │                                           │
+│                 ▼                                           │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │ Data Storage (Local CSV / JSON Files)                 │  │
+│  │   ├── data/cvs/ (Sample CVs)                          │  │
+│  │   ├── data/processed/ (AI Index, Role Profiles, dll)  │  │
+│  │   ├── data/reference/ (Courses, Skills, SDG, dll)     │  │
+│  │   └── postings.csv & static/ (JS / Assets)            │  │
+│  └───────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+      │
+      └──► Response (HTML UI + JavaScript Interactivity) returned to User
 ```
-
----
-
-## How to Run
-
-### Option 1 — Run on Replit (Recommended)
-
-1. Open the [Replit Project](https://replit.com/@your-username/your-project), or import this repository via **Create Repl → Import from GitHub**.
-2. Open the **Secrets** tab (🔒) and add the variables listed in `.env.example`:
-   - `RUNPOD_API_KEY`
-   - `RUNPOD_ENDPOINT_ID`
-3. Click **Run**. Replit uses the `.replit` file to start `python src/main.py`.
-
-### Option 2 — Run Locally
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/your-username/your-project.git
-cd your-project
-
-# 2. Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Configure environment variables
-cp .env.example .env            # then fill in your values
-
-# 5. Run the app
-python src/main.py
-```
-
-### Run Tests
-
-```bash
-python -m unittest discover tests
-```
-
----
 
 ## How We Use Replit *(Required)*
 
-Describe how your team used Replit. For example:
+- **Development:** Replit help us to brainstorm and build our ideas.
+- **Hosting:** The app is deployed with Replit Deployments.
 
-- **Development:** Collaborative coding in a shared Repl using Multiplayer.
-- **Hosting:** The app is deployed with Replit Deployments at the Live Demo link above.
-- **Secrets:** API keys are stored in Replit Secrets, never in the code.
+📄 Proof of use: (https://github.com/louisbenedictt/Jobridge/blob/main/submission/REPLIT%20PROOF%20OF%20USE.pdf)
 
-📄 Proof of use: [`submission/REPLIT PROOF OF USE.pdf`](submission/REPLIT%20PROOF%20OF%20USE.pdf)
-
-## How We Use RunPod *(Required)*
-
-Describe how your team used RunPod. For example:
-
-- **Workload:** Model inference (e.g. text generation, image processing) runs on a RunPod GPU.
-- **Setup:** `runpod/handler.py` is deployed as a **RunPod Serverless Endpoint**.
-- **Integration:** The Replit app sends requests to the endpoint using `RUNPOD_API_KEY` and `RUNPOD_ENDPOINT_ID`.
-
-Example request:
-
-```bash
-curl -X POST https://api.runpod.ai/v2/$RUNPOD_ENDPOINT_ID/runsync \
-  -H "Authorization: Bearer $RUNPOD_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"input": {"prompt": "Hello"}}'
-```
-
-📄 Proof of use: [`submission/RUNPOD PROOF OF USE.pdf`](submission/RUNPOD%20PROOF%20OF%20USE.pdf)
-
----
 
 ## Challenges & Learnings
 
@@ -182,31 +180,31 @@ curl -X POST https://api.runpod.ai/v2/$RUNPOD_ENDPOINT_ID/runsync \
 
 ## Future Improvements
 
-- [ ] Improvement 1
-- [ ] Improvement 2
+- [☑️] More advanced and creative features
+- [☑️] Use more efficient and simple codes
 
 ## Team
 
 | Name        | Role                | GitHub                                   |
 | ----------- | ------------------- | ---------------------------------------- |
-| Louis Benedict Oen  | Team Lead / Backend | [@username](https://github.com/username) |
-| William Putra Widhianto | Frontend        | [@username](https://github.com/username) |
-| Stephanie Linggawan | AI / RunPod         | [@username](https://github.com/username) |
-| Christian Valentino Linardi | AI / RunPod | [@username](https://github.com/username) |
-| Gwen Tiffany Aloei | AI / RunPod          | [@username](https://github.com/username) |
+| Louis Benedict Oen  | Team Lead / Backend / Data Pipeline | [@louisbenedictt](https://github.com/louisbenedictt) |
+| William Putra Widhianto | Data Integration | [@LiaamZ](https://github.com/LiaamZ) |
+| Stephanie Linggawan | AI / ML Forecasing and Trends | [@Stephanie-Linggawan](https://github.com/Stephanie-Linggawan) |
+| Christian Valentino Linardi | AI /Recommendation Engine| [@ChristianValentino-gg](https://github.com/ChristianValentino-gg) |
+| Gwen Tiffany Aloei | Frontend Developer | [@gwentiffanyy](https://github.com/gwentiffanyy) |
 
 ---
 
 ## Submission Checklist
 
-- [ ] Team name, domain (Domain 1 / Domain 2) and SDG track filled in
-- [ ] Slide deck link added
-- [ ] Demo video link added
-- [ ] Replit used, with proof of use in `submission/`
-- [ ] RunPod used, with proof of use in `submission/`
-- [ ] Submission template completed in `submission/`
-- [ ] "How to Run" steps verified
-- [ ] No API keys or secrets committed to the repository
+- [☑️] Team name, domain (Domain 1) and SDG track filled in
+- [☑️] Slide deck link added
+- [☑️] Demo video link added
+- [☑️] Replit used, with proof of use in `submission/`
+- [☑️] RunPod used, with proof of use in `submission/`
+- [☑️] Submission template completed in `submission/`
+- [☑️] "How to Run" steps verified
+- [☑️] No API keys or secrets committed to the repository
 
 ## License
 
