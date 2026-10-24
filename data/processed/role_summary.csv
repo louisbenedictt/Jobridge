@@ -1,20 +1,20 @@
 role_id,role,type,isco_code,ilo_gradient,ilo_score,posts,posts_hn,posts_linkedin,transferability,profile_skills,recommended,not_recommended_because,top_skills
-paralegal,Paralegal or Legal Assistant,target,3411,Gradient 1,0.39,4,4,0,1.0,1,False,only 4 job posts,account_management 50%
-hr_executive,HR Executive or HR Generalist,target,2423,Gradient 2,0.45,1,1,0,0.0,0,False,only 1 job posts; transferability 0%,
-ld_trainer,Training and L&D Executive,target,2424,Gradient 2,0.41,1,1,0,1.0,1,False,only 1 job posts,machine_learning 100%
-operations_manager,Operations and Administration Manager,target,1219,Gradient 2,0.42,8,8,0,0.36363636363636365,10,False,only 8 job posts,"machine_learning 25%, python 12%, cloud_aws 12%, cloud_azure 12%, mlops 12%, project_management 12%"
-event_executive,Event and Conference Executive,target,3332,Gradient 2,0.48,0,0,0,0.0,0,False,only 0 job posts; transferability 0%,
-business_analyst,Business and Process Analyst,target,2421,Gradient 2,0.46,34,34,0,0.375,7,False,only 34 job posts,"python 29%, cloud_aws 26%, api_integration 18%, account_management 15%, ai_agents 12%, itsm_ticketing 12%"
-sales_account_manager,B2B Sales or Account Manager,target,3322,Gradient 2,0.49,90,90,0,0.5735294117647058,12,True,,"api_integration 28%, b2b_sales 24%, sql 22%, python 12%, cloud_aws 12%, customer_service 10%"
-it_support,IT Support or Helpdesk Analyst,target,3512,Gradient 2,0.47,29,29,0,0.18867924528301888,9,False,only 29 job posts,"it_support 69%, sql 28%, python 21%, customer_service 17%, cloud_aws 14%, cloud_gcp 10%"
-data_analyst,Data Analyst (comparison),target,2511,Gradient 2,0.49,116,116,0,0.1839622641509434,13,True,,"sql 39%, python 35%, cloud_aws 28%, machine_learning 17%, api_integration 10%, airflow 9%"
-procurement_buyer,Procurement Executive or Buyer,target,3323,Minimal Exposure,0.39,0,0,0,0.0,0,False,only 0 job posts; transferability 0%,
-recruitment_consultant,Recruitment Consultant,target,3333,Minimal Exposure,0.39,38,38,0,0.6027397260273973,11,False,only 38 job posts,"api_integration 34%, recruitment 34%, git 32%, account_management 26%, sql 13%, python 13%"
-safety_health_officer,Safety and Health Officer,target,3257,Not Exposed,0.24,0,0,0,0.0,0,False,only 0 job posts; transferability 0%,
-property_facilities,Property or Facilities Executive,target,3334,Minimal Exposure,0.35,9,9,0,0.23529411764705876,15,False,only 9 job posts,"sql 22%, cloud_aws 22%, python 11%, cloud_azure 11%, cloud_gcp 11%, api_integration 11%"
-senior_accounts,Senior Accounts or Reporting Executive,upgrade,3313,Gradient 2,0.49,1,1,0,0.0,0,True,,
-office_supervisor,Office or Admin Supervisor,upgrade,3341,Gradient 2,0.43,0,0,0,0.0,0,True,,
-accounts_executive,Accounts Executive or Clerk,origin,4311,Gradient 4,0.64,12,12,0,1.0,9,True,,"b2b_sales 25%, api_integration 17%, ai_assistants 17%, git 8%, forecasting 8%, bookkeeping 8%"
-admin_executive,Admin Executive or Office Administrator,origin,4110,Gradient 4,0.6,16,16,0,1.0,9,True,,"data_entry 62%, ai_agents 38%, git 19%, machine_learning 19%, customer_service 19%, account_management 19%"
-payroll_admin,Payroll Administrator,origin,4313,Gradient 4,0.61,0,0,0,0.0,0,True,,
-customer_service,Customer Service or Contact Centre Officer,origin,4222,Gradient 3,0.58,3,3,0,1.0,3,True,,"customer_service 100%, statistics 67%, jira 33%"
+paralegal,Paralegal or Legal Assistant,target,3411,Gradient 1,0.39,663,4,659,0.5864427860696517,16,True,,"microsoft_office 42%, legal_documentation 37%, excel_advanced 27%, legal_research 22%, regulatory_compliance 19%, audit 17%"
+hr_executive,HR Executive or HR Generalist,target,2423,Gradient 2,0.45,488,1,487,0.6406025824964132,24,True,,"employee_relations 57%, recruitment 49%, microsoft_office 44%, hris 43%, employment_law 43%, performance_management 41%"
+ld_trainer,Training and L&D Executive,target,2424,Gradient 2,0.41,250,1,249,0.5253333333333333,20,True,,"instructional_design 50%, training_delivery 43%, microsoft_office 34%, coaching_mentoring 18%, project_management 18%, process_improvement 16%"
+operations_manager,Operations and Administration Manager,target,1219,Gradient 2,0.42,522,8,514,0.6562113082955017,34,True,,"microsoft_office 35%, customer_service 33%, excel_advanced 30%, logistics 27%, process_improvement 26%, audit 25%"
+event_executive,Event and Conference Executive,target,3332,Gradient 2,0.48,141,0,141,0.8257261410788383,17,True,,"event_planning 70%, logistics 41%, customer_service 36%, microsoft_office 33%, project_management 30%, negotiation 21%"
+business_analyst,Business and Process Analyst,target,2421,Gradient 2,0.46,832,34,798,0.4667374380750178,26,True,,"requirements_gathering 42%, excel_advanced 29%, agile_scrum 29%, microsoft_office 25%, process_improvement 25%, sql 22%"
+sales_account_manager,B2B Sales or Account Manager,target,3322,Gradient 2,0.49,6679,90,6589,0.5020535158680771,14,True,,"b2b_sales 47%, customer_service 41%, crm 25%, negotiation 21%, microsoft_office 20%, account_management 19%"
+it_support,IT Support or Helpdesk Analyst,target,3512,Gradient 2,0.47,638,29,609,0.3969188944268237,15,True,,"it_support 82%, customer_service 68%, windows_m365_admin 38%, microsoft_office 37%, itsm_ticketing 37%, networking_basics 27%"
+data_analyst,Data Analyst (comparison),target,2511,Gradient 2,0.49,666,116,550,0.25940383250532295,27,True,,"sql 53%, python 31%, excel_advanced 30%, dashboarding 26%, data_visualisation 25%, statistics 24%"
+procurement_buyer,Procurement Executive or Buyer,target,3323,Minimal Exposure,0.39,469,0,469,0.5648881239242686,27,True,,"procurement 92%, negotiation 64%, vendor_negotiation 59%, supply_chain_planning 57%, microsoft_office 38%, excel_advanced 36%"
+recruitment_consultant,Recruitment Consultant,target,3333,Minimal Exposure,0.39,471,38,433,0.6805671392827355,14,True,,"recruitment 78%, microsoft_office 25%, b2b_sales 22%, negotiation 21%, customer_service 19%, excel_advanced 15%"
+safety_health_officer,Safety and Health Officer,target,3257,Not Exposed,0.24,233,0,233,0.33570159857904086,23,True,,"occupational_safety 88%, audit 48%, incident_investigation 39%, emergency_response 37%, hazard_risk_assessment 37%, microsoft_office 36%"
+property_facilities,Property or Facilities Executive,target,3334,Minimal Exposure,0.35,381,9,372,0.5880031570639306,21,True,,"property_management 61%, customer_service 56%, microsoft_office 36%, excel_advanced 19%, facilities_management 18%, negotiation 17%"
+senior_accounts,Senior Accounts or Reporting Executive,upgrade,3313,Gradient 2,0.49,430,1,429,0.9422187981510016,20,True,,"accounting 79%, reconciliation 78%, financial_reporting 73%, excel_advanced 55%, ap_ar 54%, audit 52%"
+office_supervisor,Office or Admin Supervisor,upgrade,3341,Gradient 2,0.43,197,0,197,0.7983074753173485,30,True,,"microsoft_office 51%, customer_service 31%, ap_ar 29%, excel_advanced 24%, scheduling_coordination 18%, payroll 18%"
+accounts_executive,Accounts Executive or Clerk,origin,4311,Gradient 4,0.64,659,12,647,1.0,16,True,,"ap_ar 87%, excel_advanced 48%, reconciliation 47%, microsoft_office 38%, accounting 31%, financial_reporting 29%"
+admin_executive,Admin Executive or Office Administrator,origin,4110,Gradient 4,0.6,1922,16,1906,1.0,15,True,,"microsoft_office 60%, customer_service 37%, excel_advanced 29%, scheduling_coordination 29%, data_entry 16%, ap_ar 16%"
+payroll_admin,Payroll Administrator,origin,4313,Gradient 4,0.61,149,0,149,1.0,18,True,,"payroll 100%, tax 60%, excel_advanced 52%, audit 45%, microsoft_office 40%, reconciliation 34%"
+customer_service,Customer Service or Contact Centre Officer,origin,4222,Gradient 3,0.58,1179,3,1176,1.0,8,True,,"customer_service 99%, microsoft_office 21%, excel_advanced 11%, data_entry 9%, inventory_management 9%, logistics 8%"
