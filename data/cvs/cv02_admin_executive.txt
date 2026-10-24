@@ -1,0 +1,32 @@
+SYNTHETIC SAMPLE CV, created for the SDC Hackathon demo. Not a real person; employers are fictional.
+
+Name: Tan Mei Ling
+Location: Bayan Lepas, Penang
+Current role: Admin Executive, 8 years
+
+SUMMARY
+Admin executive at an electronics manufacturing plant. I run office administration, purchasing paperwork and records for a team of 120. The company is rolling out an AI assistant for document handling, and the data entry, filing and scheduling parts of my job are shrinking. I enjoy organising information and fixing messy processes.
+
+EXPERIENCE
+Admin Executive, Penang Precision Components Sdn Bhd (Jun 2018 to present)
+* Data entry of purchase orders and delivery orders into SAP
+* Calendar management for two directors and travel arrangements for visiting engineers
+* Records management and document control for ISO certification
+* Built a Google Sheets tracker fed by Google Forms for stationery and asset requests
+* Coordinate quotations with vendors for procurement
+* Event coordination for the annual dinner and two supplier days (300 guests)
+* Organise fire drills and keep first aid kits and the emergency contact list up to date
+* Supervising staff: two admin clerks
+
+Admin Assistant, Northern Haulage Sdn Bhd, Butterworth (2016 to 2018)
+* Customer service by phone and email
+* Kept the filing system for shipment documents
+
+EDUCATION
+SPM; Certificate in Office Management
+
+SKILLS
+Microsoft Office, Google Sheets, data entry, document management, procurement, customer service, SAP (user level)
+
+INTERESTS
+Making processes faster; environmental volunteering (beach clean ups)

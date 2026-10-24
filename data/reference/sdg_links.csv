@@ -1,0 +1,101 @@
+entity_type,entity_id,goal,target,strength,rationale,drafted_by,reviewed_by_human
+role,paralegal,16,16.3,direct,Accurate legal documents and filings support the rule of law and access to justice.,"Claude (Anthropic), 2026-10-24",no
+role,paralegal,16,16.6,supporting,Compliance checks make organisations more accountable.,"Claude (Anthropic), 2026-10-24",no
+role,hr_executive,8,8.5,direct,"Fair hiring, pay and policies support decent work for all.","Claude (Anthropic), 2026-10-24",no
+role,hr_executive,10,10.2,supporting,"Inclusive HR practice widens opportunity regardless of age, sex or origin.","Claude (Anthropic), 2026-10-24",no
+role,ld_trainer,4,4.3,direct,Delivers technical and vocational learning to working adults.,"Claude (Anthropic), 2026-10-24",no
+role,ld_trainer,8,8.5,supporting,Reskilling keeps colleagues in productive employment.,"Claude (Anthropic), 2026-10-24",no
+role,operations_manager,8,8.2,direct,Better processes and vendor management raise productivity.,"Claude (Anthropic), 2026-10-24",no
+role,operations_manager,8,8.5,supporting,Good operations management supports decent working conditions.,"Claude (Anthropic), 2026-10-24",no
+role,event_executive,8,8.9,direct,Events and conferences create jobs and promote local culture and products.,"Claude (Anthropic), 2026-10-24",no
+role,event_executive,12,12.5,supporting,Event planning choices can cut waste.,"Claude (Anthropic), 2026-10-24",no
+role,business_analyst,8,8.2,direct,Redesigns processes and introduces technology to raise productivity.,"Claude (Anthropic), 2026-10-24",no
+role,business_analyst,9,9.5,supporting,Helps organisations upgrade their technological capabilities.,"Claude (Anthropic), 2026-10-24",no
+role,sales_account_manager,8,8.2,direct,Connects businesses with customers and drives productive growth.,"Claude (Anthropic), 2026-10-24",no
+role,sales_account_manager,8,8.3,supporting,Helps small and medium enterprises find customers and grow.,"Claude (Anthropic), 2026-10-24",no
+role,it_support,9,9.c,direct,Keeps people connected to and able to use information and communications technology.,"Claude (Anthropic), 2026-10-24",no
+role,it_support,4,4.4,supporting,Builds the everyday digital skills of colleagues.,"Claude (Anthropic), 2026-10-24",no
+role,data_analyst,8,8.2,direct,"Gives teams evidence for decisions, which raises productivity.","Claude (Anthropic), 2026-10-24",no
+role,data_analyst,17,17.18,supporting,"Produces timely, reliable data.","Claude (Anthropic), 2026-10-24",no
+role,procurement_buyer,12,12.7,direct,Purchasing choices can favour sustainable suppliers.,"Claude (Anthropic), 2026-10-24",no
+role,procurement_buyer,8,8.7,supporting,Supplier checks help keep forced and child labour out of supply chains.,"Claude (Anthropic), 2026-10-24",no
+role,recruitment_consultant,8,8.5,direct,"Matches people to productive, decent jobs.","Claude (Anthropic), 2026-10-24",no
+role,recruitment_consultant,8,8.6,supporting,Helps young people move into employment.,"Claude (Anthropic), 2026-10-24",no
+role,safety_health_officer,8,8.8,direct,Directly promotes safe and secure working environments.,"Claude (Anthropic), 2026-10-24",no
+role,safety_health_officer,3,3.9,supporting,Controls exposure to hazardous chemicals and pollution at work.,"Claude (Anthropic), 2026-10-24",no
+role,property_facilities,7,7.3,direct,Building operations are a major lever for energy efficiency.,"Claude (Anthropic), 2026-10-24",no
+role,property_facilities,11,11.6,supporting,Waste and air quality management in buildings reduce urban impact.,"Claude (Anthropic), 2026-10-24",no
+role,senior_accounts,16,16.6,direct,Transparent financial reporting supports accountability.,"Claude (Anthropic), 2026-10-24",no
+role,senior_accounts,16,16.5,supporting,Reconciliations and controls help detect errors and fraud.,"Claude (Anthropic), 2026-10-24",no
+role,office_supervisor,8,8.5,direct,Leading an admin team well supports decent work.,"Claude (Anthropic), 2026-10-24",no
+role,office_supervisor,16,16.6,supporting,Accurate records support accountable organisations.,"Claude (Anthropic), 2026-10-24",no
+role,accounts_executive,8,8.5,direct,A highly exposed role; reskilling keeps the worker in productive employment.,"Claude (Anthropic), 2026-10-24",no
+role,accounts_executive,16,16.5,supporting,Reconciliations and controls help detect errors and fraud.,"Claude (Anthropic), 2026-10-24",no
+role,admin_executive,8,8.5,direct,A highly exposed role; reskilling keeps the worker in productive employment.,"Claude (Anthropic), 2026-10-24",no
+role,admin_executive,16,16.6,supporting,Accurate records support accountable organisations.,"Claude (Anthropic), 2026-10-24",no
+role,payroll_admin,1,1.3,direct,Correct EPF and SOCSO contributions keep workers in social protection schemes.,"Claude (Anthropic), 2026-10-24",no
+role,payroll_admin,8,8.5,supporting,A highly exposed role; reskilling keeps the worker in productive employment.,"Claude (Anthropic), 2026-10-24",no
+role,customer_service,8,8.5,direct,An exposed role; reskilling keeps the worker in productive employment.,"Claude (Anthropic), 2026-10-24",no
+skill,statistics,17,17.19,direct,Statistical skills are the base of statistical capacity.,"Claude (Anthropic), 2026-10-24",no
+skill,statistics,17,17.18,supporting,"Needed to produce reliable, disaggregated data.","Claude (Anthropic), 2026-10-24",no
+skill,data_quality,17,17.18,direct,Directly improves the reliability of data.,"Claude (Anthropic), 2026-10-24",no
+skill,data_governance,16,16.6,direct,Clear ownership and lineage make data use accountable.,"Claude (Anthropic), 2026-10-24",no
+skill,data_governance,17,17.18,supporting,Governed data is more reliable and timely.,"Claude (Anthropic), 2026-10-24",no
+skill,data_privacy,16,16.10,direct,Protects personal data and fundamental freedoms.,"Claude (Anthropic), 2026-10-24",no
+skill,responsible_ai,10,10.2,direct,"Fairness testing reduces discrimination by age, sex, origin or status.","Claude (Anthropic), 2026-10-24",no
+skill,responsible_ai,16,16.6,supporting,Makes AI systems transparent and accountable.,"Claude (Anthropic), 2026-10-24",no
+skill,esg_reporting,12,12.6,direct,Integrates sustainability information into company reporting.,"Claude (Anthropic), 2026-10-24",no
+skill,carbon_accounting,13,13.3,direct,Builds institutional capacity for climate change mitigation.,"Claude (Anthropic), 2026-10-24",no
+skill,carbon_accounting,7,7.3,supporting,Measuring energy use is the first step to improving efficiency.,"Claude (Anthropic), 2026-10-24",no
+skill,sustainability,13,13.3,direct,Climate knowledge and awareness.,"Claude (Anthropic), 2026-10-24",no
+skill,audit,16,16.5,direct,Audit and internal control help prevent corruption and fraud.,"Claude (Anthropic), 2026-10-24",no
+skill,audit,16,16.6,supporting,Makes organisations accountable.,"Claude (Anthropic), 2026-10-24",no
+skill,reconciliation,16,16.5,supporting,Reconciliations catch errors and irregular payments.,"Claude (Anthropic), 2026-10-24",no
+skill,accounting,16,16.6,supporting,Sound accounts underpin accountable organisations.,"Claude (Anthropic), 2026-10-24",no
+skill,financial_reporting,16,16.6,direct,Transparent financial reporting supports accountability.,"Claude (Anthropic), 2026-10-24",no
+skill,tax,17,17.1,direct,Supports domestic tax and revenue collection.,"Claude (Anthropic), 2026-10-24",no
+skill,einvoicing,17,17.1,direct,E invoicing improves tax compliance and revenue collection.,"Claude (Anthropic), 2026-10-24",no
+skill,einvoicing,8,8.3,supporting,Helps small businesses formalise and digitalise.,"Claude (Anthropic), 2026-10-24",no
+skill,payroll,1,1.3,direct,Correct EPF and SOCSO contributions keep workers in social protection schemes.,"Claude (Anthropic), 2026-10-24",no
+skill,payroll,8,8.5,supporting,"Accurate, timely pay is part of decent work.","Claude (Anthropic), 2026-10-24",no
+skill,procurement,12,12.7,supporting,Procurement choices can favour sustainable suppliers.,"Claude (Anthropic), 2026-10-24",no
+skill,workflow_automation,8,8.2,direct,Automation raises productivity.,"Claude (Anthropic), 2026-10-24",no
+skill,rpa,8,8.2,direct,Automation raises productivity.,"Claude (Anthropic), 2026-10-24",no
+skill,power_automate,8,8.2,direct,Automation raises productivity.,"Claude (Anthropic), 2026-10-24",no
+skill,ai_assistants,8,8.2,direct,Using AI tools well raises productivity at work.,"Claude (Anthropic), 2026-10-24",no
+skill,generative_ai,8,8.2,direct,A general purpose technology for productivity.,"Claude (Anthropic), 2026-10-24",no
+skill,generative_ai,9,9.5,supporting,Upgrades technological capability.,"Claude (Anthropic), 2026-10-24",no
+skill,llm,9,9.5,supporting,Upgrades technological capability.,"Claude (Anthropic), 2026-10-24",no
+skill,machine_learning,9,9.5,direct,Applies research methods to industry.,"Claude (Anthropic), 2026-10-24",no
+skill,deep_learning,9,9.5,direct,Applies research methods to industry.,"Claude (Anthropic), 2026-10-24",no
+skill,kpi_reporting,16,16.6,supporting,Clear performance metrics support accountability.,"Claude (Anthropic), 2026-10-24",no
+skill,occupational_safety,8,8.8,direct,Safety and health work protects workers directly.,"Claude (Anthropic), 2026-10-24",no
+skill,hazard_risk_assessment,8,8.8,direct,Finding and controlling hazards prevents injuries at work.,"Claude (Anthropic), 2026-10-24",no
+skill,incident_investigation,8,8.8,supporting,Learning from incidents prevents the next one.,"Claude (Anthropic), 2026-10-24",no
+skill,iso_45001,8,8.8,direct,A safety management system makes workplaces safer by design.,"Claude (Anthropic), 2026-10-24",no
+skill,emergency_response,8,8.8,supporting,Preparedness protects workers in an emergency.,"Claude (Anthropic), 2026-10-24",no
+skill,environmental_compliance,12,12.4,direct,Sound handling of chemicals and scheduled waste reduces pollution.,"Claude (Anthropic), 2026-10-24",no
+skill,environmental_compliance,11,11.6,supporting,Waste and emissions control reduces urban environmental impact.,"Claude (Anthropic), 2026-10-24",no
+skill,employment_law,8,8.8,direct,Knowing employment law protects labour rights.,"Claude (Anthropic), 2026-10-24",no
+skill,employee_relations,8,8.8,supporting,Fair grievance and disciplinary processes protect workers.,"Claude (Anthropic), 2026-10-24",no
+skill,compensation_benefits,8,8.5,supporting,Fair pay structures support equal pay for work of equal value.,"Claude (Anthropic), 2026-10-24",no
+skill,recruitment,8,8.5,supporting,"Fair, open hiring widens access to decent jobs.","Claude (Anthropic), 2026-10-24",no
+skill,training_delivery,4,4.3,direct,Delivers vocational learning to adults.,"Claude (Anthropic), 2026-10-24",no
+skill,instructional_design,4,4.3,supporting,Well designed courses make vocational learning accessible.,"Claude (Anthropic), 2026-10-24",no
+skill,people_management,8,8.5,supporting,Good managers make work decent and productive.,"Claude (Anthropic), 2026-10-24",no
+skill,legal_research,16,16.3,supporting,Sound legal research supports access to justice.,"Claude (Anthropic), 2026-10-24",no
+skill,legal_documentation,16,16.3,supporting,Accurate legal documents support the rule of law.,"Claude (Anthropic), 2026-10-24",no
+skill,regulatory_compliance,16,16.5,direct,Anti money laundering and compliance checks fight corruption and illicit flows.,"Claude (Anthropic), 2026-10-24",no
+skill,corporate_secretarial,16,16.6,supporting,Statutory filings keep companies transparent and accountable.,"Claude (Anthropic), 2026-10-24",no
+skill,vendor_negotiation,12,12.7,supporting,Supplier selection can favour sustainable practices.,"Claude (Anthropic), 2026-10-24",no
+skill,inventory_management,12,12.5,supporting,Good stock control cuts overstock and waste.,"Claude (Anthropic), 2026-10-24",no
+skill,supply_chain_planning,12,12.5,supporting,Planning demand well reduces waste across the supply chain.,"Claude (Anthropic), 2026-10-24",no
+skill,facilities_management,7,7.3,direct,Building maintenance and controls drive energy efficiency.,"Claude (Anthropic), 2026-10-24",no
+skill,property_management,11,11.6,supporting,Building and tenant management shapes waste and air quality.,"Claude (Anthropic), 2026-10-24",no
+skill,event_planning,8,8.9,supporting,"Events support local jobs, culture and products.","Claude (Anthropic), 2026-10-24",no
+skill,event_planning,12,12.5,supporting,Event planning choices can cut waste.,"Claude (Anthropic), 2026-10-24",no
+skill,it_support,9,9.c,direct,Keeps people able to use information and communications technology.,"Claude (Anthropic), 2026-10-24",no
+skill,networking_basics,9,9.c,supporting,Reliable networks widen access to ICT.,"Claude (Anthropic), 2026-10-24",no
+skill,cybersecurity_awareness,9,9.c,supporting,Safe use of ICT protects people and organisations.,"Claude (Anthropic), 2026-10-24",no
+skill,b2b_sales,8,8.3,supporting,Helps enterprises find customers and grow.,"Claude (Anthropic), 2026-10-24",no
+skill,cost_accounting,8,8.2,supporting,Knowing true costs helps organisations become more productive.,"Claude (Anthropic), 2026-10-24",no

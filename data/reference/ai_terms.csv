@@ -1,0 +1,13 @@
+term_id,pattern,description
+llm,\bllms?\b|large language models?,Large language models
+generative_ai,generative ai|\bgen ?ai\b,Generative AI as a named capability
+gpt_openai,\bchatgpt\b|\bgpt[- ]?[345]\w*|\bopenai\b,OpenAI models and products
+anthropic_claude,\banthropic\b|\bclaude\b,Anthropic models
+copilot,\bcopilot\b,GitHub or Microsoft Copilot
+open_models,\bllama ?[234]\b|\bmistral\b|\bdeepseek\b|\bqwen\b,Open weight model families
+prompt_engineering,prompt engineer\w*,Prompt engineering
+rag,(?-i:\bRAG\b)|retrieval[- ]augmented,Retrieval augmented generation
+vector_search,vector (database|db|store|search)s?|\bpgvector\b|\bpinecone\b,Vector databases
+llm_frameworks,\blangchain\b|llama ?index|\blanggraph\b,LLM application frameworks
+ai_agents,\bai agents?\b|\bagentic\b,AI agents
+image_generation,stable diffusion|diffusion models?|\bmidjourney\b|\bdall[- ]?e\b,Image generation models

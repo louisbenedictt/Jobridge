@@ -1,0 +1,30 @@
+SYNTHETIC SAMPLE CV, created for the SDC Hackathon demo. Not a real person; employers are fictional.
+
+Name: Nurul Izzati binti Kamal
+Location: Shah Alam, Selangor
+Current role: Accounts Executive, 5 years
+
+SUMMARY
+Accounts executive at a mid sized distribution company. I handle accounts payable and receivable for about 300 suppliers and customers. Our finance team started using automated invoice capture in 2025, and much of my keying work is now done by the system. I want to move into a role where I build reports instead of typing entries.
+
+EXPERIENCE
+Accounts Executive, Lim Brothers Distribution Sdn Bhd, Shah Alam (Mar 2021 to present)
+* Process supplier invoices and customer billing in AutoCount and SQL Account
+* Perform monthly bank reconciliations and supplier statement reconciliations
+* Prepare month end closing schedules and accruals for the finance manager
+* Submit sales invoices through the MyInvois portal and track SST
+* Build Excel workbooks with pivot tables and VLOOKUP to track overdue debtors
+* Negotiated payment terms with suppliers and chased overdue customer accounts
+
+Accounts Assistant, Seri Murni Trading, Klang (Jan 2019 to Feb 2021)
+* Data entry of purchase orders and payment vouchers
+* Filing and document management for the annual audit
+
+EDUCATION
+Diploma in Accountancy
+
+SKILLS
+AutoCount, SQL Account, Excel (pivot tables, VLOOKUP), reconciliation, accounts payable, accounts receivable, data entry, Microsoft Office
+
+INTERESTS
+Helping small businesses go digital; turning numbers into clear charts

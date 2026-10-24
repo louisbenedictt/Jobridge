@@ -1,0 +1,29 @@
+SYNTHETIC SAMPLE CV, created for the SDC Hackathon demo. Not a real person; employers are fictional.
+
+Name: Arvind a/l Selvam
+Location: Petaling Jaya, Selangor
+Current role: Finance Executive, 6 years
+
+SUMMARY
+Finance executive in a listed property group. I prepare management accounts, budgets and variance analysis, and I already build basic Power BI dashboards. Since 2025 I also collect ESG data for the group sustainability report. I want a role where analysis is my main job rather than recording transactions.
+
+EXPERIENCE
+Finance Executive, Menara Harta Bhd, Kuala Lumpur (Jan 2020 to present)
+* Prepare monthly management accounts and financial reporting packs
+* Lead annual budgeting and quarterly variance analysis for 12 projects
+* Use Power Query in Excel to combine SAP exports; built 4 Power BI dashboards for project KPIs
+* Collect energy and waste data from sites for the ESG section of the sustainability report
+* Prepare schedules for external auditors
+* Cost analysis of project budgets with site managers
+
+Audit Associate, Tiara Audit and Advisory, Kuala Lumpur (2018 to 2019)
+* Statutory audit fieldwork for SMEs under MFRS
+
+EDUCATION
+Bachelor of Accounting (Hons)
+
+SKILLS
+Excel (Power Query, pivot tables), Power BI (basic DAX), SAP, budgeting, variance analysis, financial reporting, MFRS, ESG data collection
+
+INTERESTS
+Green buildings and climate; mentoring junior staff

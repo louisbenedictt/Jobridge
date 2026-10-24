@@ -1,0 +1,28 @@
+SYNTHETIC SAMPLE CV, created for the SDC Hackathon demo. Not a real person; employers are fictional.
+
+Name: Lee Jia Hui
+Location: Kajang, Selangor
+Current status: Fresh graduate, Bachelor of Accounting and Finance
+
+SUMMARY
+Fresh accounting graduate. My internship showed me how much junior accounting work is now automated. I completed a short Python course, enjoyed it, and want to start my career in data analytics rather than audit.
+
+EXPERIENCE
+Audit Intern, Sterling Assurance PLT, Kuala Lumpur (Nov 2025 to Feb 2026)
+* Vouching and bank reconciliation testing for audit clients
+* Used Excel to sample transactions and summarise findings
+
+Part time Tutor, home tuition (2023 to 2025)
+* Taught SPM mathematics, including probability and statistics basics
+
+EDUCATION
+Bachelor of Accounting and Finance (2026). Final year project: regression analysis of SME loan defaults in Excel
+
+COURSES
+Kaggle Learn: Python (completed 2026)
+
+SKILLS
+Excel, Python (beginner), statistics, regression, reconciliation, communication skills
+
+INTERESTS
+Sustainable finance; volunteering with a financial literacy NGO

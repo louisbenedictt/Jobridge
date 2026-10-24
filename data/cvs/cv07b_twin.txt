@@ -1,0 +1,30 @@
+SYNTHETIC SAMPLE CV, created for the SDC Hackathon demo. Not a real person; employers are fictional.
+
+Name: Daniel Lim Wei Jie
+Gender: Male
+Age: 29
+Location: Ipoh, Perak
+Current role: Accounts Assistant, 6 years
+
+SUMMARY
+Accounts assistant at an accounting firm serving small businesses. Bank feeds and automatic matching in Xero now do most of the reconciliation work I used to do by hand. I have started learning SQL and Power BI in my own time and want to move into a reporting or data role.
+
+EXPERIENCE
+Accounts Assistant, Perak Business Advisory, Ipoh (2020 to present)
+* Bookkeeping for 40 SME clients in Xero and QuickBooks
+* Monthly bank reconciliations and accounts receivable follow up
+* Excel reports with pivot tables for client management meetings
+* Shared Google Sheets trackers for client documents
+
+EDUCATION
+Diploma in Accounting
+
+COURSES
+Kaggle Learn: Intro to SQL (completed 2026)
+Microsoft Learn: Power BI beginner modules (in progress)
+
+SKILLS
+Xero, QuickBooks, bookkeeping, reconciliation, Excel (pivot tables), Google Sheets, SQL (beginner), Power BI (beginner)
+
+INTERESTS
+Small business growth; reading

@@ -1,0 +1,30 @@
+SYNTHETIC SAMPLE CV, created for the SDC Hackathon demo. Not a real person; employers are fictional.
+
+Name: Muhammad Hafiz bin Zulkifli
+Location: Cyberjaya, Selangor
+Current role: Customer Operations Coordinator, 4 years
+
+SUMMARY
+Coordinator in a shared services centre that handles billing queries for an insurance client. Our team now uses an AI chatbot for first line replies, so manual handling is shrinking. I have become the person who automates things: I use ChatGPT to draft templates and Zapier to move data between tools.
+
+EXPERIENCE
+Customer Operations Coordinator, Cyber Shared Services Sdn Bhd (Feb 2022 to present)
+* Handle escalated customer service tickets in Zendesk
+* Produce weekly KPI reports on response times and backlog in Excel and Google Sheets
+* Built Zapier automations that create tickets from emails and update a tracker
+* Wrote prompt templates in ChatGPT for agents, using careful prompting to cut drafting time
+* Run process improvement sessions with team leads
+* Delivering training workshops for new agents
+* First point of contact for troubleshooting laptop and printer issues on the floor
+
+Customer Service Executive, Telco Contact Centre, Kuala Lumpur (2020 to 2022)
+* Answered billing and account queries by phone and chat
+
+EDUCATION
+Diploma in Business Administration
+
+SKILLS
+Zendesk, Excel, Google Sheets, KPI reporting, Zapier, ChatGPT, prompting, process improvement, customer service
+
+INTERESTS
+New AI tools; teaching colleagues shortcuts

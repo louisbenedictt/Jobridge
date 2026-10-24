@@ -1,0 +1,129 @@
+skill_id,skill_name,category,pattern
+sql,SQL,data_core,\bsql\b(?!\s+account(ing)?\b)|postgres(ql)?\b|\bmysql\b|\bt-sql\b|\bpl/sql\b
+python,Python,programming,\bpython\b
+pandas,pandas and dataframes,programming,\bpandas\b|\bpolars\b|\bdataframes?\b
+r_lang,R,programming,"\brstudio\b|\btidyverse\b|\bggplot2?\b|\bR programming\b|(?-i:(?<=[\s,(/])R(?=\s*[,/)]))"
+excel_advanced,"Excel (pivot tables, lookups, Power Query)",spreadsheets,\b(ms |microsoft )?excel\b(?!\s+(at|in)\b)|pivot ?tables?|\bv ?lookup\b|\bx ?lookup\b|power query
+google_sheets,Google Sheets,spreadsheets,google sheets|\bgsheets?\b|google forms
+vba_macros,"VBA, macros and Apps Script",spreadsheets,\bvba\b|excel macros?|apps script
+power_bi,Power BI,bi_tools,power ?bi\b|\bdax\b
+tableau,Tableau,bi_tools,\btableau\b
+looker,Looker and Looker Studio,bi_tools,\blooker\b|google data studio
+data_visualisation,Data visualisation,data_core,data visuali[sz]ation|\bvisuali[sz]ations?\b|\bd3(\.js)?\b|matplotlib|plotly|seaborn
+dashboarding,Dashboards,data_core,\bdashboard(s|ing)?\b
+statistics,Statistics,data_core,\bstatistic(s|al)\b|\bregression\b|hypothesis test\w*|\bprobability\b
+ab_testing,A/B testing and experimentation,data_core,\ba/b test\w*|\bab test\w*|split test\w*|\bexperimentation\b
+data_cleaning,Data cleaning and preparation,data_core,data (cleaning|cleansing|wrangling|preparation|munging)|clean(ing|ed)? (the )?data\b
+product_analytics,Product and web analytics,data_core,product analytics|mixpanel|\bamplitude\b|google analytics|\bga4\b|funnel analysis|cohort analysis
+data_modelling,Data modelling,data_engineering,data model(l)?ing|dimensional model\w*|star schema
+etl_pipelines,ETL and data pipelines,data_engineering,\betl\b|\belt\b|data pipelines?|\bdata ingestion\b
+dbt,dbt,data_engineering,\bdbt\b
+airflow,Airflow and orchestration,data_engineering,\bairflow\b|\bdagster\b|\bprefect\b
+data_warehousing,"Data warehouses (Snowflake, BigQuery)",data_engineering,data ?warehous(e|es|ing)\b|\bsnowflake\b|\bbigquery\b|\bredshift\b|\bdatabricks\b|lakehouse
+spark,Spark and big data,data_engineering,\b(py)?spark\b|\bhadoop\b|\bkafka\b
+git,Git and version control,engineering,\bgit\b|\bgithub\b|\bgitlab\b|version control
+cloud_aws,AWS,cloud,\baws\b|amazon web services
+cloud_azure,Microsoft Azure,cloud,\bazure\b
+cloud_gcp,Google Cloud,cloud,\bgcp\b|google cloud
+api_integration,APIs and integrations,engineering,\bapis?\b|\brest(ful)? apis?\b|\bwebhooks?\b
+machine_learning,Machine learning,ai_ml,machine learning|\bml\b|scikit-learn|\bsklearn\b|\bxgboost\b
+forecasting,Forecasting and time series,ai_ml,\bforecast(s|ing)?\b|time[- ]series
+nlp,Natural language processing,ai_ml,\bnlp\b|natural language processing|text mining
+deep_learning,Deep learning,ai_ml,deep learning|neural net\w*|\bpytorch\b|\btensorflow\b|\bkeras\b
+mlops,MLOps and LLMOps,ai_ml,\bmlops\b|\bllmops\b|model deployment|model monitoring
+llm,Large language models,genai,\bllms?\b|large language models?|foundation models?
+generative_ai,Generative AI,genai,generative ai|\bgen ?ai\b
+prompt_engineering,Prompt engineering,genai,prompt engineer\w*|prompt design|\bprompting\b
+rag,Retrieval augmented generation (RAG),genai,(?-i:\bRAG\b)|retrieval[- ]augmented
+vector_databases,Vector databases and embeddings,genai,vector (database|db|store|search)s?|\bembeddings?\b|\bpinecone\b|\bweaviate\b|\bpgvector\b|\bqdrant\b|\bchromadb\b|\bmilvus\b
+llm_frameworks,"LLM frameworks (LangChain, LlamaIndex)",genai,\blangchain\b|llama ?index|\blanggraph\b|hugging ?face|semantic kernel
+ai_agents,AI agents,genai,\bai agents?\b|\bagentic\b|multi[- ]agent|autonomous agents?
+fine_tuning,Fine tuning models,genai,fine[- ]?tun(e|ed|ing)\b|\brlhf\b
+ai_assistants,"AI assistants at work (ChatGPT, Copilot, Claude)",genai,\bchatgpt\b|\bcopilot\b|\bgpt[- ]?[345]\w*|\bopenai\b|\banthropic\b|\bclaude\b
+responsible_ai,Responsible AI and AI ethics,governance,responsible ai|ai ethics|ethical ai|ai safety|ai governance|algorithmic fairness|bias (testing|mitigation|audit\w*)
+workflow_automation,"Workflow automation (Zapier, Make, n8n)",automation,\bzapier\b|\bn8n\b|make\.com|workflow automation|\bintegromat\b
+rpa,Robotic process automation (RPA),automation,\brpa\b|robotic process automation|\buipath\b|automation anywhere|blue prism
+power_automate,Power Automate and Power Platform,automation,power automate|power apps|power platform|microsoft flow
+financial_modelling,Financial modelling,finance,financial model(l)?(ing|s)?\b|\bdcf\b|three[- ]statement model
+fpa_budgeting,"Budgeting, FP&A and variance analysis",finance,\bbudgeting\b|budget (planning|management|variance)|\bfp\s?&\s?a\b|financial planning|variance analysis
+accounting,"Accounting principles (MFRS, IFRS, GAAP)",finance,\baccounting (principles|standards)\b|\bgaap\b|\bifrs\b|\bmfrs\b|general ledger|journal entr(y|ies)|double[- ]entry
+bookkeeping,Bookkeeping,finance,bookkeep(ing|er)
+reconciliation,Reconciliation,finance,\breconcil\w*
+ap_ar,"Accounts payable and receivable, invoicing",finance,accounts? (payable|receivable)|\bap/ar\b|\bar/ap\b|\binvoic\w*|\bcredit control\b|debt collection
+payroll,Payroll,finance,\bpayroll\b|\bepf\b|\bsocso\b|\bpcb\b
+financial_reporting,Financial reporting and month end close,finance,financial (reporting|statements?|reports?)|month[- ]end (clos\w*|reporting)|year[- ]end clos\w*|management accounts
+audit,Audit and internal control,finance,\baudit(s|ing|ors?)?\b|internal controls?|\bsox\b
+tax,Tax and indirect tax (SST),finance,\btax(es|ation)?\b|\bsst\b|\bgst\b|\bvat\b
+erp_systems,"ERP systems (SAP, Oracle, NetSuite)",finance,\berp\b|\bsap\b|\bnetsuite\b|oracle (financials|fusion|ebs|erp)|dynamics 365|\bodoo\b
+accounting_software,"Accounting software (Xero, QuickBooks, AutoCount, SQL Account)",finance,\bxero\b|\bquickbooks\b|\bautocount\b|sql account(ing)?\b|\bmyob\b|\bsage (50|300|intacct|accounting)\b
+einvoicing,E invoicing compliance (MyInvois),finance,\bmyinvois\b|\be-?invoic(e|es|ing)\b
+data_entry,Data entry,admin,data entry|data input|keying in|typing speed
+document_management,Document and records management,admin,document (management|control)|records? management|filing system|archiv(e|ing) (documents|records)
+scheduling_coordination,Scheduling and office coordination,admin,calendar management|diary management|schedul(e|ing) meetings|travel (arrangements|booking)|event coordination|office administration
+microsoft_office,Microsoft Office,admin,microsoft office|ms office|office 365|microsoft 365|\bpowerpoint\b|\bms word\b|microsoft word
+customer_service,Customer service,admin,customer (service|support)|client service|help ?desk|\bzendesk\b|\bfreshdesk\b
+procurement,Procurement and purchasing,admin,\bprocurement\b|purchase orders?|\bpurchasing\b|vendor management
+hris,HR information systems,admin,\bhris\b|\bworkday\b|\bbamboohr\b|hr systems?
+requirements_gathering,Requirements gathering,business,requirements? (gathering|elicitation|analysis)|user stories|business requirements|functional specifications?
+process_improvement,Process improvement,business,process (improvement|optimi[sz]ation|mapping|redesign)|continuous improvement|six sigma|\bbpmn\b|lean (methodolog\w*|principles)
+project_management,Project management,business,project management|\bpmp\b|prince2
+agile_scrum,Agile and Scrum,business,\bagile\b|\bscrum\b|\bkanban\b|sprint planning
+jira,"Jira, Confluence and work trackers",business,\bjira\b|\bconfluence\b|\basana\b|\btrello\b
+stakeholder_management,Stakeholder management,business,\bstakeholder\w*
+kpi_reporting,KPI and metrics reporting,business,\bkpis?\b|key performance indicators?|\bokrs?\b|metrics reporting|business metrics
+crm,"CRM (Salesforce, HubSpot)",business,\bcrm\b|\bsalesforce\b|\bhubspot\b|\bzoho\b
+data_governance,Data governance,governance,data governance|data stewardship|master data|data catalog(ue)?|metadata management|data lineage
+data_privacy,"Data privacy (PDPA, GDPR)",governance,\bgdpr\b|\bpdpa\b|\bccpa\b|\bhipaa\b|data privacy|data protection
+data_quality,Data quality and validation,governance,data quality|data validation|data integrity
+esg_reporting,ESG and sustainability reporting,sustainability,\besg\b|sustainability report\w*|\bgri\b|\bissb\b|\btcfd\b|\bcsrd\b
+carbon_accounting,Carbon accounting and emissions data,sustainability,carbon (accounting|footprint|emissions?|management|reporting)|greenhouse gas|\bghg\b|scope [123]\b|net[- ]zero|decarboni[sz]\w*
+sustainability,Sustainability and climate,sustainability,\bsustainability\b|climate (tech|change|risk|solutions)|renewable energy|clean ?energy|clean ?tech|energy transition
+data_storytelling,Data storytelling and presenting insights,soft,data storytelling|storytelling with data|present(ing|ed)? (insights|findings|results)|communicat\w+ (insights|findings)
+communication,Communication,soft,communication skills|written and verbal|verbal and written|excellent communicat\w*
+problem_solving,Problem solving and analytical thinking,soft,problem[- ]solving|analytical (thinking|skills|mindset)|critical thinking
+recruitment,Recruitment and talent acquisition,people_hr,\brecruitment\b|talent acquisition|candidate sourcing|sourcing candidates|\bheadhunt\w*|full[- ]cycle recruit\w*|\bscreening (candidates|cvs|resumes)
+employee_onboarding,Employee onboarding,people_hr,(employee|new hire|staff) onboarding|onboarding (of )?new (hires|employees|staff)|new hire orientation|\binduction (programmes?|programs?|training)
+employee_relations,Employee relations,people_hr,employee relations|industrial relations|\bgrievances?\b|disciplinary (process|procedures?|hearings?|action)
+performance_management,Performance management,people_hr,performance management|performance (appraisals?|reviews?|evaluations?)|appraisal process
+employment_law,Employment law (Employment Act),people_hr,employment (act|law|laws|legislation)|labou?r (law|laws|legislation)|industrial relations act|minimum wages? order|wage and hour
+compensation_benefits,Compensation and benefits,people_hr,compensation (and|&) benefits|\bc&b\b|benefits administration|salary (benchmarking|structures?)|total rewards
+hr_policies,HR policies and procedures,people_hr,\bhr polic(y|ies)|human resources? polic(y|ies)|employee handbook|hr (procedures|sops?)
+training_delivery,Training delivery and facilitation,people_hr,training (delivery|sessions?|workshops?|programmes?|programs?)|deliver(ing)? training|facilitat(e|ing|ion of) (workshops?|training|sessions)|train the trainer|(?-i:\bTTT\b)
+instructional_design,Instructional design and training needs analysis,people_hr,instructional design|curriculum (design|development)|training needs (analysis|assessment)|(?-i:\bTNA\b)|e-?learning (content|development|modules?)|learning management systems?|(?-i:\bLMS\b)
+coaching_mentoring,Coaching and mentoring,people_hr,\bcoaching\b|\bmentor(ing|ship)\b|coach (and|&) mentor
+people_management,People management and team leadership,people_hr,people management|team leadership|line management|managing (a )?team|lead(ing)? (a )?team of|supervis(e|ing) (a team|staff|employees)|direct reports
+legal_research,Legal research,legal_compliance,legal research|case law|\bstatutes\b|legislative research
+legal_documentation,Legal documentation and drafting,legal_compliance,legal (documents?|documentation|drafting)|drafting (contracts|agreements|legal)|contract drafting|\bconveyancing\b|\baffidavits?\b|court (filings?|documents)|litigation support|e-?filing
+contract_management,Contract management,legal_compliance,contract (management|administration|review|negotiation)|managing contracts|contract lifecycle
+regulatory_compliance,"Regulatory compliance (AML, KYC)",legal_compliance,regulatory compliance|compliance (monitoring|checks?|programmes?|programs?|officer|reviews?|framework)|(?-i:\bAML\b)|anti[- ]money laundering|(?-i:\bKYC\b)|know your customer
+corporate_secretarial,"Corporate secretarial (Companies Act, SSM)",legal_compliance,company secretar\w*|corporate secretar\w*|(?-i:\bSSM\b)|companies act|board (minutes|resolutions|meetings)|statutory (filings?|registers?|returns?)|annual returns?
+risk_management,Risk management,legal_compliance,risk management|risk registers?|enterprise risk|operational risk|risk (mitigation|controls?)
+inventory_management,Inventory and stock control,operations,inventory (management|control|planning|tracking|accuracy)|stock (control|take|taking|management|levels)|\bstocktak\w*|cycle counts?
+logistics,Logistics and shipping,operations,\blogistics\b|shipping (and|&) receiving|\bfreight\b|freight forwarding|(?-i:\b3PL\b)|last[- ]mile|\bdispatch(ing)?\b|import (and|&) export|customs clearance
+warehouse_management,Warehouse operations,operations,warehous(e|ing) (operations|management|staff)|(?-i:\bWMS\b)|pick(ing)? (and|&) pack(ing)?|order fulfil?ment|distribution cent(re|er)
+supply_chain_planning,Supply chain and demand planning,operations,supply chain|demand planning|(?-i:\bS&OP\b)|sales and operations planning|material requirements planning|(?-i:\bMRP\b)
+vendor_negotiation,Supplier management and negotiation,operations,supplier (management|negotiations?|relationships?|evaluation|selection|performance)|vendor (negotiations?|selection|evaluation|relationships?)|negotiat\w+ with (vendors|suppliers)|strategic sourcing|sourcing strateg\w*|(?-i:\bRFQs?\b)|(?-i:\bRFPs?\b)|\btender(s|ing)?\b
+quality_management,Quality management (ISO 9001),operations,quality management|(?-i:\bQMS\b)|iso\s?9001|quality (control|assurance) (procedures|systems|inspections?)|internal quality audits?
+production_planning,Production planning and scheduling,operations,production (planning|scheduling|planner|schedules?)|capacity planning|shop floor|manufacturing operations
+event_planning,Event planning and management,operations,event (planning|management|coordination|logistics|operations)|conference (planning|management|logistics)|venue (sourcing|booking|management|selection)|(?-i:\bMICE\b)|trade shows?|exhibitions? (management|logistics)
+facilities_management,Facilities and building management,operations,facilit(y|ies) management|building (maintenance|management|operations)|maintenance (contracts|schedules?|scheduling)|preventive maintenance|space planning|office facilities
+property_management,Property and tenancy management,operations,property management|tenan(cy|ts?) (management|relations)|lease (management|administration|renewals?)|\bleasing\b|strata management|rent collection
+occupational_safety,Occupational safety and health (OSH),safety,occupational (safety|health)|(?-i:\bOSHA?\b)|workplace safety|health (and|&) safety|safety (and|&) health|(?-i:\bDOSH\b)|(?-i:\bHSE\b)|(?-i:\bEHS\b)|(?-i:\bSHE\b)|safety officer
+hazard_risk_assessment,Hazard identification and risk assessment (HIRARC),safety,(?-i:\bHIRARC\b)|hazard identification|job safety analysis|(?-i:\bJSA\b)|risk assessments?|(?-i:\bJHA\b)|job hazard analysis
+incident_investigation,Incident investigation,safety,incident (investigation|reporting|management)|accident investigation|root cause analysis|near[- ]miss
+iso_45001,Safety management systems (ISO 45001),safety,iso\s?45001|ohsas\s?18001|safety management systems?
+environmental_compliance,Environmental compliance (ISO 14001),safety,iso\s?14001|environmental (compliance|management systems?|permits?|regulations?|monitoring)|scheduled wastes?|waste management
+emergency_response,Emergency response and fire safety,safety,emergency (response|preparedness|evacuation|plans?)|fire safety|fire drills?|first aid
+b2b_sales,B2B sales and business development,sales,(?-i:\bB2B\b) sales|business development|new business|sales pipeline|\bprospecting\b|lead generation|cold call\w*|sales (quotas?|targets)|closing deals
+account_management,Account management and customer success,sales,account management|key accounts?|client relationship management|customer success|account planning|client retention
+negotiation,Negotiation,business,\bnegotiat(e|es|ed|ing|ion|ions|ors?)\b
+presentation_skills,Presentation and public speaking,business,presentation skills|public speaking|deliver(ing)? presentations|presenting to (clients|customers|stakeholders|management)
+it_support,IT support and troubleshooting,it_support,technical support|tech support|desktop support|(?-i:\bIT support\b)|service desk|end[- ]user support|(first|1st|second|2nd) line support|level [12] support|troubleshoot(ing)? (hardware|software|user|pc|laptop|printer|network)
+itsm_ticketing,ITIL and IT service management,it_support,(?-i:\bITIL\b)|(?-i:\bITSM\b)|servicenow|jira service (desk|management)|ticketing (system|tools?)|incident (and|&) problem management
+windows_m365_admin,Windows and Microsoft 365 administration,it_support,active directory|windows (server|10|11)|microsoft 365 admin\w*|office 365 admin\w*|\bintune\b|endpoint management|azure ad|entra id
+networking_basics,Networking basics,it_support,computer network\w*|network (troubleshooting|administration|support|configuration|fundamentals)|tcp/ip|(?-i:\bDHCP\b)|(?-i:\bVPN\b)|(?-i:\bLAN\b)|(?-i:\bWAN\b)|wi-?fi (setup|troubleshooting)
+cybersecurity_awareness,Cybersecurity awareness,it_support,cyber ?security|information security|\bphishing\b|security awareness|(?-i:\bInfoSec\b)
+cost_accounting,Cost accounting and costing,finance,cost accounting|\bcosting\b|cost analysis|standard costs?|cost cent(re|er) reporting
+attention_to_detail,Attention to detail,soft,attention to detail|detail[- ]oriented|eye for detail
+time_management,Time management and prioritisation,soft,time management|prioriti[sz](e|ing|ation)\b|multi-?task\w*|manage multiple (tasks|priorities|deadlines)
+teamwork,Teamwork and collaboration,soft,\bteam ?work\b|team player|collaborative (environment|team|mindset)
