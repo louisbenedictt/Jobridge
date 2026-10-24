@@ -1,0 +1,129 @@
+skill_id,trend_2023-12,trend_now
+sql,declining,stable
+python,declining,stable
+pandas,stable,rising
+r_lang,rising,rising
+excel_advanced,stable,stable
+google_sheets,limited data,limited data
+vba_macros,limited data,limited data
+power_bi,limited data,limited data
+tableau,rising,stable
+looker,stable,rising
+data_visualisation,declining,rising
+dashboarding,rising,rising
+statistics,rising,rising
+ab_testing,rising,rising
+data_cleaning,stable,stable
+product_analytics,stable,rising
+data_modelling,rising,rising
+etl_pipelines,declining,stable
+dbt,stable,rising
+airflow,rising,stable
+data_warehousing,declining,rising
+spark,rising,stable
+git,stable,stable
+cloud_aws,stable,stable
+cloud_azure,rising,rising
+cloud_gcp,declining,rising
+api_integration,stable,stable
+machine_learning,declining,stable
+forecasting,rising,rising
+nlp,declining,rising
+deep_learning,rising,rising
+mlops,rising,rising
+llm,stable,stable
+generative_ai,stable,stable
+prompt_engineering,limited data,rising
+rag,limited data,rising
+vector_databases,stable,stable
+llm_frameworks,limited data,rising
+ai_agents,limited data,rising
+fine_tuning,stable,rising
+ai_assistants,stable,rising
+responsible_ai,limited data,rising
+workflow_automation,stable,stable
+rpa,limited data,stable
+power_automate,limited data,limited data
+financial_modelling,limited data,rising
+fpa_budgeting,stable,stable
+accounting,limited data,limited data
+bookkeeping,limited data,stable
+reconciliation,limited data,rising
+ap_ar,stable,rising
+payroll,stable,rising
+financial_reporting,limited data,limited data
+audit,rising,rising
+tax,rising,rising
+erp_systems,stable,rising
+accounting_software,stable,stable
+einvoicing,limited data,limited data
+data_entry,limited data,rising
+document_management,limited data,limited data
+scheduling_coordination,limited data,limited data
+microsoft_office,stable,stable
+customer_service,rising,declining
+procurement,declining,rising
+hris,stable,rising
+requirements_gathering,rising,stable
+process_improvement,rising,stable
+project_management,stable,stable
+agile_scrum,stable,rising
+jira,rising,rising
+stakeholder_management,stable,rising
+kpi_reporting,stable,rising
+crm,stable,stable
+data_governance,rising,stable
+data_privacy,stable,rising
+data_quality,rising,stable
+esg_reporting,stable,stable
+carbon_accounting,stable,stable
+sustainability,stable,stable
+data_storytelling,limited data,limited data
+communication,stable,rising
+problem_solving,stable,rising
+recruitment,rising,rising
+employee_onboarding,limited data,limited data
+employee_relations,limited data,limited data
+performance_management,stable,stable
+employment_law,limited data,limited data
+compensation_benefits,stable,rising
+hr_policies,limited data,limited data
+training_delivery,limited data,stable
+instructional_design,limited data,limited data
+coaching_mentoring,stable,rising
+people_management,rising,rising
+legal_research,limited data,limited data
+legal_documentation,limited data,limited data
+contract_management,rising,stable
+regulatory_compliance,stable,rising
+corporate_secretarial,limited data,limited data
+risk_management,stable,stable
+inventory_management,stable,stable
+logistics,declining,rising
+warehouse_management,stable,rising
+supply_chain_planning,rising,declining
+vendor_negotiation,limited data,stable
+quality_management,limited data,limited data
+production_planning,limited data,rising
+event_planning,limited data,limited data
+facilities_management,limited data,limited data
+property_management,stable,rising
+occupational_safety,stable,stable
+hazard_risk_assessment,limited data,stable
+incident_investigation,limited data,rising
+iso_45001,limited data,limited data
+environmental_compliance,limited data,limited data
+emergency_response,limited data,limited data
+b2b_sales,rising,stable
+account_management,rising,declining
+negotiation,rising,stable
+presentation_skills,limited data,limited data
+it_support,stable,stable
+itsm_ticketing,limited data,stable
+windows_m365_admin,stable,rising
+networking_basics,rising,rising
+cybersecurity_awareness,rising,stable
+cost_accounting,limited data,limited data
+attention_to_detail,stable,stable
+time_management,declining,rising
+teamwork,stable,rising

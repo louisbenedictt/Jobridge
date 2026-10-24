@@ -1,0 +1,229 @@
+entity_type,entity_id,goal,target,strength,rationale,reviewed_by_human
+role,paralegal,16,16.3,direct,Accurate legal documents and filings support the rule of law and access to justice.,no
+role,paralegal,16,16.6,supporting,Compliance checks make organisations more accountable.,no
+role,hr_executive,8,8.5,direct,"Fair hiring, pay and policies support decent work for all.",no
+role,hr_executive,10,10.2,supporting,"Inclusive HR practice widens opportunity regardless of age, sex or origin.",no
+role,ld_trainer,4,4.3,direct,Delivers technical and vocational learning to working adults.,no
+role,ld_trainer,8,8.5,supporting,Reskilling keeps colleagues in productive employment.,no
+role,operations_manager,8,8.2,direct,Better processes and vendor management raise productivity.,no
+role,operations_manager,8,8.5,supporting,Good operations management supports decent working conditions.,no
+role,event_executive,8,8.9,direct,Events and conferences create jobs and promote local culture and products.,no
+role,event_executive,12,12.5,supporting,Event planning choices can cut waste.,no
+role,business_analyst,8,8.2,direct,Redesigns processes and introduces technology to raise productivity.,no
+role,business_analyst,9,9.5,supporting,Helps organisations upgrade their technological capabilities.,no
+role,sales_account_manager,8,8.2,direct,Connects businesses with customers and drives productive growth.,no
+role,sales_account_manager,8,8.3,supporting,Helps small and medium enterprises find customers and grow.,no
+role,it_support,9,9.c,direct,Keeps people connected to and able to use information and communications technology.,no
+role,it_support,4,4.4,supporting,Builds the everyday digital skills of colleagues.,no
+role,data_analyst,8,8.2,direct,"Gives teams evidence for decisions, which raises productivity.",no
+role,data_analyst,17,17.18,supporting,"Produces timely, reliable data.",no
+role,procurement_buyer,12,12.7,direct,Purchasing choices can favour sustainable suppliers.,no
+role,procurement_buyer,8,8.7,supporting,Supplier checks help keep forced and child labour out of supply chains.,no
+role,recruitment_consultant,8,8.5,direct,"Matches people to productive, decent jobs.",no
+role,recruitment_consultant,8,8.6,supporting,Helps young people move into employment.,no
+role,safety_health_officer,8,8.8,direct,Directly promotes safe and secure working environments.,no
+role,safety_health_officer,3,3.9,supporting,Controls exposure to hazardous chemicals and pollution at work.,no
+role,property_facilities,7,7.3,direct,Building operations are a major lever for energy efficiency.,no
+role,property_facilities,11,11.6,supporting,Waste and air quality management in buildings reduce urban impact.,no
+role,senior_accounts,16,16.6,direct,Transparent financial reporting supports accountability.,no
+role,senior_accounts,16,16.5,supporting,Reconciliations and controls help detect errors and fraud.,no
+role,office_supervisor,8,8.5,direct,Leading an admin team well supports decent work.,no
+role,office_supervisor,16,16.6,supporting,Accurate records support accountable organisations.,no
+role,accounts_executive,8,8.5,direct,A highly exposed role; reskilling keeps the worker in productive employment.,no
+role,accounts_executive,16,16.5,supporting,Reconciliations and controls help detect errors and fraud.,no
+role,admin_executive,8,8.5,direct,A highly exposed role; reskilling keeps the worker in productive employment.,no
+role,admin_executive,16,16.6,supporting,Accurate records support accountable organisations.,no
+role,payroll_admin,1,1.3,direct,Correct EPF and SOCSO contributions keep workers in social protection schemes.,no
+role,payroll_admin,8,8.5,supporting,A highly exposed role; reskilling keeps the worker in productive employment.,no
+role,customer_service,8,8.5,direct,An exposed role; reskilling keeps the worker in productive employment.,no
+skill,statistics,17,17.19,direct,Statistical skills are the base of statistical capacity.,no
+skill,statistics,17,17.18,supporting,"Needed to produce reliable, disaggregated data.",no
+skill,data_quality,17,17.18,direct,Directly improves the reliability of data.,no
+skill,data_governance,16,16.6,direct,Clear ownership and lineage make data use accountable.,no
+skill,data_governance,17,17.18,supporting,Governed data is more reliable and timely.,no
+skill,data_privacy,16,16.10,direct,Protects personal data and fundamental freedoms.,no
+skill,responsible_ai,10,10.2,direct,"Fairness testing reduces discrimination by age, sex, origin or status.",no
+skill,responsible_ai,16,16.6,supporting,Makes AI systems transparent and accountable.,no
+skill,esg_reporting,12,12.6,direct,Integrates sustainability information into company reporting.,no
+skill,carbon_accounting,13,13.3,direct,Builds institutional capacity for climate change mitigation.,no
+skill,carbon_accounting,7,7.3,supporting,Measuring energy use is the first step to improving efficiency.,no
+skill,sustainability,13,13.3,direct,Climate knowledge and awareness.,no
+skill,audit,16,16.5,direct,Audit and internal control help prevent corruption and fraud.,no
+skill,audit,16,16.6,supporting,Makes organisations accountable.,no
+skill,reconciliation,16,16.5,supporting,Reconciliations catch errors and irregular payments.,no
+skill,accounting,16,16.6,supporting,Sound accounts underpin accountable organisations.,no
+skill,financial_reporting,16,16.6,direct,Transparent financial reporting supports accountability.,no
+skill,tax,17,17.1,direct,Supports domestic tax and revenue collection.,no
+skill,einvoicing,17,17.1,direct,E invoicing improves tax compliance and revenue collection.,no
+skill,einvoicing,8,8.3,supporting,Helps small businesses formalise and digitalise.,no
+skill,payroll,1,1.3,direct,Correct EPF and SOCSO contributions keep workers in social protection schemes.,no
+skill,payroll,8,8.5,supporting,"Accurate, timely pay is part of decent work.",no
+skill,procurement,12,12.7,supporting,Procurement choices can favour sustainable suppliers.,no
+skill,workflow_automation,8,8.2,direct,Automation raises productivity.,no
+skill,rpa,8,8.2,direct,Automation raises productivity.,no
+skill,power_automate,8,8.2,direct,Automation raises productivity.,no
+skill,ai_assistants,8,8.2,direct,Using AI tools well raises productivity at work.,no
+skill,generative_ai,8,8.2,direct,A general purpose technology for productivity.,no
+skill,generative_ai,9,9.5,supporting,Upgrades technological capability.,no
+skill,llm,9,9.5,supporting,Upgrades technological capability.,no
+skill,machine_learning,9,9.5,direct,Applies research methods to industry.,no
+skill,deep_learning,9,9.5,direct,Applies research methods to industry.,no
+skill,kpi_reporting,16,16.6,supporting,Clear performance metrics support accountability.,no
+skill,occupational_safety,8,8.8,direct,Safety and health work protects workers directly.,no
+skill,hazard_risk_assessment,8,8.8,direct,Finding and controlling hazards prevents injuries at work.,no
+skill,incident_investigation,8,8.8,supporting,Learning from incidents prevents the next one.,no
+skill,iso_45001,8,8.8,direct,A safety management system makes workplaces safer by design.,no
+skill,emergency_response,8,8.8,supporting,Preparedness protects workers in an emergency.,no
+skill,environmental_compliance,12,12.4,direct,Sound handling of chemicals and scheduled waste reduces pollution.,no
+skill,environmental_compliance,11,11.6,supporting,Waste and emissions control reduces urban environmental impact.,no
+skill,employment_law,8,8.8,direct,Knowing employment law protects labour rights.,no
+skill,employee_relations,8,8.8,supporting,Fair grievance and disciplinary processes protect workers.,no
+skill,compensation_benefits,8,8.5,supporting,Fair pay structures support equal pay for work of equal value.,no
+skill,recruitment,8,8.5,supporting,"Fair, open hiring widens access to decent jobs.",no
+skill,training_delivery,4,4.3,direct,Delivers vocational learning to adults.,no
+skill,instructional_design,4,4.3,supporting,Well designed courses make vocational learning accessible.,no
+skill,people_management,8,8.5,supporting,Good managers make work decent and productive.,no
+skill,legal_research,16,16.3,supporting,Sound legal research supports access to justice.,no
+skill,legal_documentation,16,16.3,supporting,Accurate legal documents support the rule of law.,no
+skill,regulatory_compliance,16,16.5,direct,Anti money laundering and compliance checks fight corruption and illicit flows.,no
+skill,corporate_secretarial,16,16.6,supporting,Statutory filings keep companies transparent and accountable.,no
+skill,vendor_negotiation,12,12.7,supporting,Supplier selection can favour sustainable practices.,no
+skill,inventory_management,12,12.5,supporting,Good stock control cuts overstock and waste.,no
+skill,supply_chain_planning,12,12.5,supporting,Planning demand well reduces waste across the supply chain.,no
+skill,facilities_management,7,7.3,direct,Building maintenance and controls drive energy efficiency.,no
+skill,property_management,11,11.6,supporting,Building and tenant management shapes waste and air quality.,no
+skill,event_planning,8,8.9,supporting,"Events support local jobs, culture and products.",no
+skill,event_planning,12,12.5,supporting,Event planning choices can cut waste.,no
+skill,it_support,9,9.c,direct,Keeps people able to use information and communications technology.,no
+skill,networking_basics,9,9.c,supporting,Reliable networks widen access to ICT.,no
+skill,cybersecurity_awareness,9,9.c,supporting,Safe use of ICT protects people and organisations.,no
+skill,b2b_sales,8,8.3,supporting,Helps enterprises find customers and grow.,no
+skill,cost_accounting,8,8.2,supporting,Knowing true costs helps organisations become more productive.,no
+skill,sql,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,python,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,pandas,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,r_lang,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,excel_advanced,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,google_sheets,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,vba_macros,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,power_bi,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,tableau,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,looker,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_visualisation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,dashboarding,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,statistics,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,ab_testing,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_cleaning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,product_analytics,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_modelling,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,etl_pipelines,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,dbt,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,airflow,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_warehousing,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,spark,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,git,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,cloud_aws,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,cloud_azure,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,cloud_gcp,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,api_integration,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,machine_learning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,forecasting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,nlp,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,deep_learning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,mlops,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,llm,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,generative_ai,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,prompt_engineering,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,rag,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,vector_databases,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,llm_frameworks,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,ai_agents,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,fine_tuning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,ai_assistants,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,responsible_ai,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,workflow_automation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,rpa,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,power_automate,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,financial_modelling,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,fpa_budgeting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,accounting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,bookkeeping,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,reconciliation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,ap_ar,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,payroll,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,financial_reporting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,audit,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,tax,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,erp_systems,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,accounting_software,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,einvoicing,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_entry,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,document_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,scheduling_coordination,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,microsoft_office,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,customer_service,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,procurement,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,hris,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,requirements_gathering,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,process_improvement,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,project_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,agile_scrum,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,jira,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,stakeholder_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,kpi_reporting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,crm,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_governance,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_privacy,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_quality,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,esg_reporting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,carbon_accounting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,sustainability,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,data_storytelling,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,communication,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,problem_solving,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,recruitment,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,employee_onboarding,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,employee_relations,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,performance_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,employment_law,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,compensation_benefits,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,hr_policies,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,training_delivery,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,instructional_design,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,coaching_mentoring,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,people_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,legal_research,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,legal_documentation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,contract_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,regulatory_compliance,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,corporate_secretarial,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,risk_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,inventory_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,logistics,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,warehouse_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,supply_chain_planning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,vendor_negotiation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,quality_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,production_planning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,event_planning,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,facilities_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,property_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,occupational_safety,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,hazard_risk_assessment,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,incident_investigation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,iso_45001,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,environmental_compliance,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,emergency_response,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,b2b_sales,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,account_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,negotiation,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,presentation_skills,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,it_support,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,itsm_ticketing,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,windows_m365_admin,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,networking_basics,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,cybersecurity_awareness,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,cost_accounting,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,attention_to_detail,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,time_management,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no
+skill,teamwork,4,4.4,baseline,Learning this skill is itself progress on relevant skills for decent jobs.,no

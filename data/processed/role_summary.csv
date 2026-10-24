@@ -1,0 +1,20 @@
+role_id,role,type,isco_code,ilo_gradient,ilo_score,posts,posts_hn,posts_linkedin,transferability,profile_skills,recommended,not_recommended_because,top_skills
+paralegal,Paralegal or Legal Assistant,target,3411,Gradient 1,0.39,4,4,0,1.0,1,False,only 4 job posts,account_management 50%
+hr_executive,HR Executive or HR Generalist,target,2423,Gradient 2,0.45,1,1,0,0.0,0,False,only 1 job posts; transferability 0%,
+ld_trainer,Training and L&D Executive,target,2424,Gradient 2,0.41,1,1,0,1.0,1,False,only 1 job posts,machine_learning 100%
+operations_manager,Operations and Administration Manager,target,1219,Gradient 2,0.42,8,8,0,0.36363636363636365,10,False,only 8 job posts,"machine_learning 25%, python 12%, cloud_aws 12%, cloud_azure 12%, mlops 12%, project_management 12%"
+event_executive,Event and Conference Executive,target,3332,Gradient 2,0.48,0,0,0,0.0,0,False,only 0 job posts; transferability 0%,
+business_analyst,Business and Process Analyst,target,2421,Gradient 2,0.46,34,34,0,0.375,7,False,only 34 job posts,"python 29%, cloud_aws 26%, api_integration 18%, account_management 15%, ai_agents 12%, itsm_ticketing 12%"
+sales_account_manager,B2B Sales or Account Manager,target,3322,Gradient 2,0.49,90,90,0,0.5735294117647058,12,True,,"api_integration 28%, b2b_sales 24%, sql 22%, python 12%, cloud_aws 12%, customer_service 10%"
+it_support,IT Support or Helpdesk Analyst,target,3512,Gradient 2,0.47,29,29,0,0.18867924528301888,9,False,only 29 job posts,"it_support 69%, sql 28%, python 21%, customer_service 17%, cloud_aws 14%, cloud_gcp 10%"
+data_analyst,Data Analyst (comparison),target,2511,Gradient 2,0.49,116,116,0,0.1839622641509434,13,True,,"sql 39%, python 35%, cloud_aws 28%, machine_learning 17%, api_integration 10%, airflow 9%"
+procurement_buyer,Procurement Executive or Buyer,target,3323,Minimal Exposure,0.39,0,0,0,0.0,0,False,only 0 job posts; transferability 0%,
+recruitment_consultant,Recruitment Consultant,target,3333,Minimal Exposure,0.39,38,38,0,0.6027397260273973,11,False,only 38 job posts,"api_integration 34%, recruitment 34%, git 32%, account_management 26%, sql 13%, python 13%"
+safety_health_officer,Safety and Health Officer,target,3257,Not Exposed,0.24,0,0,0,0.0,0,False,only 0 job posts; transferability 0%,
+property_facilities,Property or Facilities Executive,target,3334,Minimal Exposure,0.35,9,9,0,0.23529411764705876,15,False,only 9 job posts,"sql 22%, cloud_aws 22%, python 11%, cloud_azure 11%, cloud_gcp 11%, api_integration 11%"
+senior_accounts,Senior Accounts or Reporting Executive,upgrade,3313,Gradient 2,0.49,1,1,0,0.0,0,True,,
+office_supervisor,Office or Admin Supervisor,upgrade,3341,Gradient 2,0.43,0,0,0,0.0,0,True,,
+accounts_executive,Accounts Executive or Clerk,origin,4311,Gradient 4,0.64,12,12,0,1.0,9,True,,"b2b_sales 25%, api_integration 17%, ai_assistants 17%, git 8%, forecasting 8%, bookkeeping 8%"
+admin_executive,Admin Executive or Office Administrator,origin,4110,Gradient 4,0.6,16,16,0,1.0,9,True,,"data_entry 62%, ai_agents 38%, git 19%, machine_learning 19%, customer_service 19%, account_management 19%"
+payroll_admin,Payroll Administrator,origin,4313,Gradient 4,0.61,0,0,0,0.0,0,True,,
+customer_service,Customer Service or Contact Centre Officer,origin,4222,Gradient 3,0.58,3,3,0,1.0,3,True,,"customer_service 100%, statistics 67%, jira 33%"
